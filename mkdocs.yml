@@ -1,0 +1,97 @@
+site_name: reverge
+site_description: A Red Team Focused Attack Surface Management Framework
+site_author: Securifera
+site_url: https://reverge.io
+repo_url: https://github.com/securifera/reverge_wiki
+
+nav:
+  - Home: index.md
+  - Setup:
+    - Database: setup/database.md
+  - Targets: 
+    - Scope: targets/scope.md
+    - Scan: targets/scan.md
+  - Collectors:
+    - Setup: collectors/setup.md
+    - Manage: collectors/manage.md
+    - Connect: collectors/connect.md
+  - Resources: 
+    - Components: resources/components.md
+    - Modules: resources/modules.md
+    - Tools: resources/tools.md
+    - Wordlists: resources/wordlists.md
+  - Settings: 
+    - Users: settings/users.md
+    - Providers: settings/providers.md
+    - Certificates: settings/certificates.md
+    - Database: settings/database.md
+
+
+theme:
+  logo: assets/reverge_logo_2.png
+  favicon: assets/reverge_icon.png
+  name: material
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    scheme: slate
+    primary: custom
+  features:
+    - content.code.copy
+    - content.code.annotate
+    - toc.integrate
+    - navigation.footer
+    - navigation.indexes
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.top
+    - navigation.tabs
+    - navigation.tabs.sticky
+
+plugins:
+  - search
+  - section-index
+  - social
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [reverge]
+          options:
+            docstring_options:
+              ignore_init_summary: true
+            docstring_section_style: list
+            heading_level: 3
+            merge_init_into_class: true
+            show_signature_annotations: true
+            show_symbol_type_heading: true
+            show_symbol_type_toc: true
+            signature_crossrefs: true
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: "#"
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+
+extra:
+  homepage: https://www.securifera.com
+  social:
+  - icon: fontawesome/brands/github
+    link: https://github.com/securifera
+  - icon: fontawesome/brands/twitter
+    link: https://twitter.com/securifera
