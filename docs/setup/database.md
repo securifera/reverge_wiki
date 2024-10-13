@@ -2,7 +2,7 @@ To configure the database for local or remote access, select the appropriate rad
 <br>
 <br>
 <center>
-<img src="/assets/db_setup.png" alt="Descriptive Alt Text" width="600" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+<img src="../../assets/db_setup.png" alt="Descriptive Alt Text" width="600" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
 </center>
 <br>
 <br>
@@ -10,7 +10,7 @@ After the database connection has been configured, the database schema needs to 
 <br>
 <br>
 <center>
-<img src="/assets/db_migrate.png" alt="Descriptive Alt Text" width="600" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+<img src="../../assets/db_migrate.png" alt="Descriptive Alt Text" width="600" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
 </center>
 <br>
 <br>
@@ -18,7 +18,7 @@ Once the reverge database tables have been loaded, a password needs to be provid
 <br>
 <br>
 <center>
-<img src="/assets/db_admin_pw.png" alt="Descriptive Alt Text" width="600" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+<img src="../../assets/db_admin_pw.png" alt="Descriptive Alt Text" width="600" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
 </center>
 <br>
 <br>
@@ -26,7 +26,7 @@ If everything worked as expected, the following login page should appear. Login 
 <br>
 <br>
 <center>
-<img src="/assets/login.png" alt="Descriptive Alt Text" width="600" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+<img src="../../assets/login.png" alt="Descriptive Alt Text" width="600" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
 </center>
 <br>
 <br>
