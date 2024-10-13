@@ -8,7 +8,7 @@
     --md-primary-bg-color: #000000;
 
     /* Body Background */
-    --md-default-bg-color: #DEE2E6;
+    --md-default-bg-color: #F8F9FA;
 
     /* Paragraph */
     --md-default-fg-color: #212529;
@@ -32,13 +32,13 @@
     --md-code-hl-function-color: hsla(291, 57%, 65%, 1);
     --md-code-hl-constant-color: hsla(250, 62%, 70%, 1);
     --md-code-hl-keyword-color: hsla(219, 66%, 64%, 1);
-    --md-code-hl-string-color: var(--md-accent-fg-color);
+    --md-code-hl-string-color: #ffffff;
     --md-code-hl-name-color: var(--md-default-fg-color--light);
-    --md-code-hl-operator-color: var(--md-default-fg-color--light);
+    --md-code-hl-operator-color: #ffffff;
     --md-code-hl-punctuation-color: var(--md-default-fg-color--light);
     --md-code-hl-comment-color: rgb(55, 161, 108);
     --md-code-hl-generic-color: var(--md-default-fg-color--light);
-    --md-code-hl-variable-color: var(--md-default-fg-color--light);
+    --md-code-hl-variable-color: #ffffff;
 }
 
 .md-header__title {
