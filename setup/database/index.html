@@ -1013,7 +1013,33 @@
 </center>
 <br>
 <br>
+If <strong>Remote Database</strong> is selected, the following page will be displayed. This option allows for self-hosting a MySQL database rather than having it hosted on the reverge server. The page will provide a SSH private key and instructions on how to port forward the self-hosted MySQL database port to the reverge server.<br />
+<br></p>
+<div class="admonition note">
+<p class="admonition-title">MySQL docker</p>
+<p>A compatible MySQL docker can be setup with the following command. This does not include persistent storage.</p>
+<div class="language-sh highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>-p<span class="w"> </span><span class="m">3306</span>:3306<span class="w"> </span>-e<span class="w"> </span><span class="nv">MYSQL_ROOT_PASSWORD</span><span class="o">=</span><span class="s2">&quot;password&quot;</span><span class="w"> </span>-e<span class="w"> </span><span class="nv">MYSQL_DATABASE</span><span class="o">=</span><span class="s2">&quot;scan_data&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">MYSQL_USER</span><span class="o">=</span><span class="s2">&quot;db_user&quot;</span><span class="w"> </span>-e<span class="w"> </span><span class="nv">MYSQL_PASSWORD</span><span class="o">=</span><span class="s2">&quot;password&quot;</span><span class="w"> </span>mysql:latest
+</code></pre></div>
+</div>
+<p><br>
+After the self-hosted MySQL is installed and configured, execute the provided SSH port forward command from the MySQL server to connect it to the reverge server. Be sure to replace REVERGE_IP_ADDRESS with the reverge server IP address.
+<br>
+<br>
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ssh -i priv_key restricted_user@REVERGE_IP_ADDRESS -p22222 -N -R 3306:*:3306
+</code></pre></div>
+<br>
+Once the connection has been made, enter in the database connection information and click the <strong>Connect</strong> button.
+<br>
+<br>
+<br>
+<center>
+<img src="../../assets/db_remote.png" alt="Descriptive Alt Text" width="600" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center>
+<br>
+<br>
 After the database connection has been configured, the database schema needs to be loaded. On the next page, click the <strong>Migrate</strong> button to load the reverge database tables.
+<br>
 <br>
 <br>
 <center>
@@ -1024,12 +1050,14 @@ After the database connection has been configured, the database schema needs to 
 Once the reverge database tables have been loaded, a password needs to be provided for the <strong>admin</strong> user to complete setup. Enter a sufficiently complex password and click the <strong>Install</strong> button.
 <br>
 <br>
+<br>
 <center>
 <img src="../../assets/db_admin_pw.png" alt="Descriptive Alt Text" width="600" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
 </center>
 <br>
 <br>
 If everything worked as expected, the following login page should appear. Login with the <strong>admin</strong> username and the password provided in the previous step.
+<br>
 <br>
 <br>
 <center>
