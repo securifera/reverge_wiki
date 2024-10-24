@@ -437,6 +437,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#secrets-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Secrets Manager
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1042,18 +1051,47 @@
 
   <h1>Home</h1>
 
-<p>Reverge is a red team focused, attack surface management framework</p>
+<p>reverge is a red team focused, attack surface management framework</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h2>
 <p>Goto Amazon Marketplace and deploy a reverge instance</p>
 <p><strong>When configuring the security groups for the EC2 instance consider the following:</strong></p>
 <ul>
-<li>Reverge web interface is running on port <strong>80</strong></li>
+<li>reverge web interface is running on port <strong>80</strong></li>
 <li>TLS certificate issuance using Letsencrypt requires port <strong>443</strong> open to the internet</li>
 <li>SSH port forwarding for a remote database is running on port <strong>2222</strong></li>
 </ul>
 <p><br>
 <img src="../../assets/ec2_sec_group.png" alt="EC2 Security Groups" width="750" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
 <br></p>
+<h2 id="secrets-manager">Secrets Manager<a class="headerlink" href="#secrets-manager" title="Permanent link">#</a></h2>
+<p>reverge stores various sensitive third-party credentials used to interact with cloud services and other applications. By default, these credentials are encrypted with a key that is also stored in the database, offering minimal protection if the database is compromised. However, reverge offers the ability to utilize AWS Secrets Manager to store the encryption key separately, thereby providing an extra layer of security for the stored credentials.</p>
+<p>After setting up a reverge AWS instance, it is strongly recommended to create an AWS IAM role accompanied by a suitable permission policy. This setup will enable the creation and retrieval of the reverge encryption key. Once the role is created, attach it to the reverge EC2 instance.</p>
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>{
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    &quot;Version&quot;: &quot;2012-10-17&quot;,
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    &quot;Statement&quot;: [
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        {
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>            &quot;Sid&quot;: &quot;AllowCreateSecret&quot;,
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>            &quot;Effect&quot;: &quot;Allow&quot;,
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>            &quot;Action&quot;: [
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>                &quot;secretsmanager:CreateSecret&quot;
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>            ],
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>            &quot;Resource&quot;: &quot;*&quot;
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        },
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        {
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>            &quot;Sid&quot;: &quot;AllowManageOwnSecrets&quot;,
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>            &quot;Effect&quot;: &quot;Allow&quot;,
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>            &quot;Action&quot;: [
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>                &quot;secretsmanager:DescribeSecret&quot;,
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>                &quot;secretsmanager:GetSecretValue&quot;,
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>                &quot;secretsmanager:UpdateSecret&quot;,
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>                &quot;secretsmanager:DeleteSecret&quot;,
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>                &quot;secretsmanager:ListSecretVersionIds&quot;
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>            ],
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>            &quot;Resource&quot;: &quot;arn:aws:secretsmanager:*:*:secret:reverge_key*&quot;
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>        }
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    ]
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>}
+</code></pre></div>
 
 
 

@@ -105,6 +105,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#lets-encrypt" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -942,6 +947,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Certificates
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -951,6 +967,50 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lets-encrypt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's Encrypt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-certificates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Certificates
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1007,16 +1067,18 @@
 
 <p>To enable TLS on the reverge web application, select the appropriate radio button. There are two supported methods, <strong>Let's Encrypt</strong> for automatic certificate generation or uploading custom generated TLS certificates.
 <br>
-<br>
-For the <strong>Let's Encrypt</strong> option, enter the fully qualified domain name (FQDN) in the <strong>Domain Name</strong> field and click the <img src="../../assets/save_btn.png" alt="Save button" width="25">  button.
+<br></p>
+<h2 id="lets-encrypt">Let's Encrypt<a class="headerlink" href="#lets-encrypt" title="Permanent link">#</a></h2>
+<p>For the <strong>Let's Encrypt</strong> option, enter the fully qualified domain name (FQDN) in the <strong>Domain Name</strong> field and click the <img src="../../assets/save_btn.png" alt="Save button" width="25">  button. <span style="color: red;"><strong>If you do not have a DNS A record configured for the given domain and a firewall exception for port 443, this will fail.</strong></span>
 <br>
 <br>
 <center>
 <img src="../../assets/settings_cert_le.png" alt="Lets Encrypt Cert" width="750" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
 </center>
 <br>
-<br>
-For the <strong>Custom Certificates</strong> option, enter the fully qualified domain name (FQDN) in the <strong>Domain Name</strong> field. Next click the <strong>Browse</strong> button for the Private and Public Certificate fields and select the appropriate certificate file. Finally, click the <img src="../../assets/save_btn.png" alt="Save button" width="25">  button.
+<br></p>
+<h2 id="custom-certificates">Custom Certificates<a class="headerlink" href="#custom-certificates" title="Permanent link">#</a></h2>
+<p>For the <strong>Custom Certificates</strong> option, enter the fully qualified domain name (FQDN) in the <strong>Domain Name</strong> field. Next click the <strong>Browse</strong> button for the Private and Public Certificate fields and select the appropriate certificate file. Finally, click the <img src="../../assets/save_btn.png" alt="Save button" width="25">  button.
 <br>
 <br>
 <br>
@@ -1024,8 +1086,9 @@ For the <strong>Custom Certificates</strong> option, enter the fully qualified d
 <img src="../../assets/settings_cert_custom.png" alt="Custom Certs" width="750" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
 </center>
 <br>
-<br>
-If everything worked as expected, the Reverge server should soon be reachable on port <strong>443</strong> at the specified domain—for example, <a href="https://reverge.io">https://reverge.io</a>. If not, you can restart the process by clicking the <img src="../../assets/reset_btn.png" alt="Save button" width="28"> button.</p>
+<br></p>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">#</a></h2>
+<p>If everything worked as expected, the Reverge server should soon be reachable on port <strong>443</strong> at the specified domain—for example, <a href="https://reverge.io">https://reverge.io</a>. If not, you can restart the process by clicking the <img src="../../assets/reset_btn.png" alt="Save button" width="28"> button.</p>
 
 
 

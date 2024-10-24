@@ -105,6 +105,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#add-provider" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -921,6 +926,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Providers
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -930,6 +946,50 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#add-provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add Provider
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove-provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remove Provider
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credential-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credential Management
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1005,7 +1065,31 @@
 
   <h1>Providers</h1>
 
-
+<p>Providers are infrastructure services that provide resources to reverge for instantiating collectors. The most common providers include cloud services like <a href="https://aws.amazon.com/">AWS</a> and locally hosted virtualization platforms like <a href="https://www.proxmox.com/">Promox</a>. A provider object contains the configuration details required to interact with these services, things like credentials. Setting up a provider is typically the initial step required to create a <a href="/collectors/setup/">collector</a> for performing scans through reverge.</p>
+<h2 id="add-provider">Add Provider<a class="headerlink" href="#add-provider" title="Permanent link">#</a></h2>
+<p>To add a new provider to reverge click on the <img src="../../assets/add_btn.png" alt="Save button" width="30">  button in the top right corner of the Providers dialog.
+<br>
+<br>
+<center>
+<img src="../../assets/providers.png" alt="User Table" width="750" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center>
+<br>
+<br>
+Next, populate the fields in the <strong>Add Provider</strong> dialog. For the virtualization providers, this will include an identifier for the VM image to use and the SSH user to be provisioned. Then, click <strong>Save</strong>.
+<br>
+<br>
+<center>
+<img src="../../assets/add_aws_prov.png" alt="Add Provider" width="550" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center></p>
+<h2 id="remove-provider">Remove Provider<a class="headerlink" href="#remove-provider" title="Permanent link">#</a></h2>
+<p>To remove a provider from reverge, select the checkbox to the left of the provider name in the Providers dialog and click on the <img src="../../assets/delete_btn.png" alt="Delete button" width="30">  button in the top right corner.
+<br>
+<br>
+<center>
+<img src="../../assets/provider_delete.png" alt="Delete Provider" width="750" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center></p>
+<h2 id="credential-management">Credential Management<a class="headerlink" href="#credential-management" title="Permanent link">#</a></h2>
+<p><span style="color: red;"><strong>By default reverge does not securely store provider credentials in the database</strong></span>. To add additional protection to the credentials stored in the reverge database it is recommended to setup the proper roles and policies in <a href="/#secrets-manager">AWS Secrets Manager</a>. Once that has been completed, click the <img src="../../assets/enable_btn.png" alt="Enable button" width="30"> button in the top right corner to enable the use of AWS Secrets Manager to encrypt and decrypt provider credentials.</p>
 
 
 
