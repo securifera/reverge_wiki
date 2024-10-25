@@ -2,7 +2,7 @@
 [data-md-color-scheme="slate"] {
     --md-primary-fg-color: #ffffff;
     --md-primary-fg-color--dark: var(--md-primary-fg-color);
-    --md-accent-fg-color: #212529;
+    --md-accent-fg-color: rgb(0, 123, 255);
 
     --md-primary-color: #EAEAEA;
     --md-primary-bg-color: #000000;
