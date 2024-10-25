@@ -1064,8 +1064,26 @@
 <img src="../../assets/ec2_sec_group.png" alt="EC2 Security Groups" width="750" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
 <br></p>
 <h2 id="secrets-manager">Secrets Manager<a class="headerlink" href="#secrets-manager" title="Permanent link">#</a></h2>
-<p>reverge stores various sensitive third-party credentials used to interact with cloud services and other applications. By default, these credentials are encrypted with a key that is also stored in the database, offering minimal protection if the database is compromised. However, reverge offers the ability to utilize AWS Secrets Manager to store the encryption key separately, thereby providing an extra layer of security for the stored credentials.</p>
+<p>reverge stores various sensitive third-party credentials used to interact with cloud services and other applications. By default, these credentials are encrypted with a key that is also stored in the database, offering minimal protection if the database is compromised. However, reverge offers the ability to utilize <a href="https://aws.amazon.com/secrets-manager/">AWS Secrets Manager</a> to store the encryption key separately, thereby providing an extra layer of security for the stored credentials.</p>
 <p>After setting up a reverge AWS instance, it is strongly recommended to create an AWS IAM role accompanied by a suitable permission policy. This setup will enable the creation and retrieval of the reverge encryption key. Once the role is created, attach it to the reverge EC2 instance.</p>
+<p>The following steps will walk you through setting up a IAM policy &amp; role and attaching it to the reverge EC2 instance.</p>
+<ol>
+<li>Login to the AWS console and navigate to <strong>Identity and Access Managament (IAM)</strong></li>
+<li>Cick on <strong>Policies</strong> in the menu on the left of the screen</li>
+<li>Click the <strong>Create policy</strong> button
+<br>
+<br>
+<center>
+<img src="../../assets/create_policy.png" alt="Create Policy" width="750" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center></li>
+<li>Click the <strong>JSON button</strong> in the <strong>Policy editor</strong> dialog
+<br>
+<br>
+<center>
+<img src="../../assets/json_policy.png" alt="Create Policy" width="750" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center></li>
+<li>
+<p>Copy and paste the following JSON policy into the policy editor and click <strong>Next</strong>
 <div class="language-text highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>{
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    &quot;Version&quot;: &quot;2012-10-17&quot;,
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    &quot;Statement&quot;: [
@@ -1091,7 +1109,46 @@
 <a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>        }
 <a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    ]
 <a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>}
-</code></pre></div>
+</code></pre></div></p>
+</li>
+<li>
+<p>Fill in the <strong>Policy name</strong> field, e.g. RevergeSMPolicy, in the <strong>Policy details</strong> dialog and click the <strong>Create policy</strong> button at the bottom of the screen.</p>
+</li>
+<li>Cick on <strong>Roles</strong> in the menu on the left of the screen</li>
+<li>Click the <strong>Create role</strong> button
+<br>
+<br>
+<center>
+<img src="../../assets/create_role.png" alt="Create Role" width="750" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center></li>
+<li>Select the <strong>AWS service</strong> radio button (default) in the <strong>Trusted entity type</strong> dialog. Select <strong>EC2</strong> in the <strong>Service or use case</strong> drop down input field in the <strong>Use case</strong> dialog. Click the <strong>Next</strong> button
+<br>
+<br>
+<center>
+<img src="../../assets/role_entity.png" alt="Role Entity" width="750" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center></li>
+<li>Type in the name of the policy created in step 6 in the search field in the <strong>Permissions policies</strong> dialog. Click the checkbox beside the correct policy name in the policy table. Click the <strong>Next</strong> button
+<br>
+<br>
+<center>
+<img src="../../assets/role_perms.png" alt="Role Permissions" width="750" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center></li>
+<li>Fill in the <strong>Role name</strong> field in the <strong>Role details</strong> dialog and click the <strong>Create role</strong> button</li>
+<li>Navigate to <strong>EC2</strong> in the AWS services menu</li>
+<li>Click on <strong>Instances</strong> in the menu on the left of the screen</li>
+<li>Click the checkbox beside the reverge server instance. Click the <strong>Actions</strong> drop down menu at the top of the page. Click <strong>Security</strong> -&gt; <strong>Modify IAM role</strong>
+<br>
+<br>
+<center>
+<img src="../../assets/modify_iam_btn.png" alt="Modify IAM" width="750" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center></li>
+<li>Select the IAM role created in step 11 and click the <strong>Update IAM role</strong>
+<br>
+<br>
+<center>
+<img src="../../assets/set_role.png" alt="Set Role" width="750" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);"></li>
+<li>Congratulations! You have given the reverge server permission to use the AWS Secrets Manager</li>
+</ol>
 
 
 
