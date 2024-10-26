@@ -103,6 +103,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#export-tables" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -961,6 +966,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Database
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -970,6 +986,41 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#export-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Export Tables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Import Tables
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1003,7 +1054,19 @@
 
   <h1>Database</h1>
 
-
+<p>The Database menu on the Settings page can be used to backup and restore the reverge database. The primary use case for this functionality is transferring the data from one instance of reverge to another, typically when upgrading.</p>
+<h2 id="export-tables">Export Tables<a class="headerlink" href="#export-tables" title="Permanent link">#</a></h2>
+<p>To export the reverge database tables, Click the <strong>Export</strong> button at the bottom left of the <strong>Export Database</strong> dialog. This action will queue an export job that will be added to the table. When the job is complete, the database export can be downloaded by clicking the <img src="../../assets/download_btn.png" alt="Download button" width="30"> button. The export file is a compressed tar archive containing reverge data in csv format and the exported table schemas.
+<br>
+<br>
+<center>
+<img src="../../assets/export_db.png" alt="Export DB" width="750" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center></p>
+<h2 id="import-tables">Import Tables<a class="headerlink" href="#import-tables" title="Permanent link">#</a></h2>
+<p>The import process is the mirror operation to the database export feature and expects a compressed tar archive that was produced by performing an <strong>Export</strong>. <span style="color: red;"><strong>It is highly recommmended to perform this operation immediately after installing a new reverge instance to avoid data inconsistency</strong>.</span> To restore a reverge database, click the <strong>Browse</strong> button and select a previously exported tar.gz reverge database export file. Next, click the <strong>Import</strong> button.
+<center>
+<img src="../../assets/import_db.png" alt="Import DB" width="550" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center></p>
 
 
 
