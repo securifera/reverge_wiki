@@ -60,3 +60,6 @@ If everything worked as expected, the following login page should appear. Login 
 </center>
 <br>
 <br>
+<span style="color: red;">If upgrading from a previous version of reverge, it is highly recommended to proceed with restoring the reverge database by [importing](/settings/database#import-tables) previous data.</span>
+<br>
+<br>
