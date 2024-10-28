@@ -11,10 +11,7 @@ nav:
   - Targets: 
     - Scope: targets/scope.md
     - Scan: targets/scan.md
-  - Collectors:
-    - Setup: collectors/setup.md
-    - Manage: collectors/manage.md
-    - Connect: collectors/connect.md
+  - Collectors: collectors/collectors.md
   - Resources: 
     - Components: resources/components.md
     - Modules: resources/modules.md
