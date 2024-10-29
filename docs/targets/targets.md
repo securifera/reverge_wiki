@@ -1,4 +1,4 @@
-A Target in reverge represents a collection of CIDR blocks, domains, or specific URLs that can be scanned by a reverge collector.
+A Target in reverge represents a collection of CIDR blocks, domains, or specific URLs that can be scanned by a reverge collector. The targets menu provides the ability to manage targets. This includes the addition and removal of targets, defining target scope, and scheduling target scans.
 <br>
 ## Add Target
 To create a target in reverge click on the <img src="../../assets/add_btn.png" alt="Save button" width="30">  button in the top right corner of the Targets dialog.
