@@ -545,6 +545,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#scans" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scans
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -733,6 +742,8 @@
       
         
       
+        
+      
     
     
       
@@ -852,6 +863,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../settings/logging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -905,7 +937,7 @@ Enter a name for the target in the <strong>Add Target</strong> dialog and click 
 <img src="../../assets/target_delete.png" alt="Delete Target" width="750" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
 </center></p>
 <h2 id="scope">Scope<a class="headerlink" href="#scope" title="Permanent link">#</a></h2>
-<p>After the target is created you will be redirected to the target dashboard. From this interface you can define the target's scope.
+<p>After creating the target, you’ll be redirected to the target dashboard, where you can set the target's scope. Subnets, Domains, and URLs can be added to the scope individually by clicking on the respective <img src="../../assets/add_btn.png" alt="Add button" width="30"> button.
 <br>
 <br>
 <center>
@@ -913,13 +945,61 @@ Enter a name for the target in the <strong>Add Target</strong> dialog and click 
 </center>
 <br>
 <br>
-Subnets, Domains, and URLs can be added to the scope individually by click on the <img src="../../assets/add_btn.png" alt="Add button" width="30"> button for the respective scope type. Target scope can also be imported in bulk by clicking on the <img src="../../assets/import_btn.png" alt="Import button" width="30"> button. The import feature expects a line-delimited scope file. Click the <strong>Browse</strong> button and select the scope import file. Click the <strong>Import</strong> button.
+Target scope can also be imported in bulk by clicking on the <img src="../../assets/import_btn.png" alt="Import button" width="30"> button. The import feature requires a line-delimited scope file. To proceed, click the <strong>Browse</strong> button to select the scope file, then click <strong>Import</strong>.
 <br>
 <br>
 <br>
 <center>
 <img src="../../assets/import_scope.png" alt="Import Scope" width="600" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
 </center>
+<br></p>
+<h2 id="scans">Scans<a class="headerlink" href="#scans" title="Permanent link">#</a></h2>
+<p>The <strong>Scans</strong> submenu within the <strong>Target</strong> page lets you initiate new scans for a specified scope and view results from past scans. The <strong>Scan Schedule</strong> table lists the currently scheduled scans along with their configurations This includes the selected ports, chosen tools, scan recurrence, and the specified collector.
+<br>
+<br>
+<center>
+<img src="../../assets/target_scans.png" alt="Target Scans" width="750" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center>
+<br>
+<br>
+To schedule a scan to be executed on the target, click on the click on the <img src="../../assets/add_btn.png" alt="Add button" width="30"> button  in the <strong>Scan Schedule</strong> dialog or the <img src="../../assets/scan_btn.png" alt="Scan button" width="30"> button on the target dialog menu. The <strong>Network Scan</strong> modal requires multiple parameters be configured before proceeding. First, select a <a href="/collectors/collectors/">Collector</a> to perform the scan. Then, choose the <strong>Hosts</strong> to scan, which can either be the entire scope or specific IPs or subnets entered manually.. 
+<br>
+<br>
+<center>
+<img src="../../assets/scan_dlg.png" alt="Target Scans" width="450" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center>
+<br>
+<br>
+Likewise, you must select the <strong>Ports</strong> to scan. The drop-down list offers several predefined groups, or you can choose <strong>Custom</strong> to manually enter individual ports.
+<br>
+<br>
+<br>
+<center>
+<img src="../../assets/port_list.png" alt="Target Scans" width="450" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center>
+<br>
+<br>
+The <strong>Schedule</strong> drop-down list contains options for either a <strong>One Time</strong> scan or setting up a <strong>Recurring</strong> scan by defining the schedule using a cron-like format.
+<br>
+<br>
+<center>
+<img src="../../assets/scan_schedule.png" alt="Target Scans" width="450" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center>
+<br>
+<br>
+The <strong>Passive Collection</strong> container includes tools that gather data about a target from third-party sources without any direct interaction with the target network. The <strong>Active Collection</strong> container lists tools that communicate directly with the target.
+<br><br>
+Each of the selected <a href="collectors/collectors/">Tools</a> will run with the default arguments specified in the <strong>Resources</strong>-&gt;<strong>Tools</strong> menu. To modify these default arguments for the scan, click on the <img src="../../assets/drop_dwn.png" alt="Add button" width="20" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">  button and enter the new arguments in the tool arguments input box. 
+<br>
+<br>
+<br>
+<center>
+<img src="../../assets/custom_args.png" alt="Target Scans" width="450" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center>
+<br>
+<br>
+After selecting the scan parameters, click the <strong>Submit</strong> button. This will add an entry to the <strong>Scan Schedule</strong> table.
+<br>
 <br></p>
 
 
