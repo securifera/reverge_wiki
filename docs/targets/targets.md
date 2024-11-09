@@ -24,7 +24,7 @@ To remove a target from reverge, select the checkbox to the left of the target n
 <img src="../../assets/target_delete.png" alt="Delete Target" width="750" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
 </center>
 ## Scope
-After the target is created you will be redirected to the target dashboard. From this interface you can define the target's scope.
+After creating the target, you’ll be redirected to the target dashboard, where you can set the target's scope. Subnets, Domains, and URLs can be added to the scope individually by clicking on the respective <img src="../../assets/add_btn.png" alt="Add button" width="30"> button.
 <br>
 <br>
 <center>
@@ -32,11 +32,59 @@ After the target is created you will be redirected to the target dashboard. From
 </center>
 <br>
 <br>
-Subnets, Domains, and URLs can be added to the scope individually by click on the <img src="../../assets/add_btn.png" alt="Add button" width="30"> button for the respective scope type. Target scope can also be imported in bulk by clicking on the <img src="../../assets/import_btn.png" alt="Import button" width="30"> button. The import feature expects a line-delimited scope file. Click the **Browse** button and select the scope import file. Click the **Import** button.
+Target scope can also be imported in bulk by clicking on the <img src="../../assets/import_btn.png" alt="Import button" width="30"> button. The import feature requires a line-delimited scope file. To proceed, click the **Browse** button to select the scope file, then click **Import**.
 <br>
 <br>
 <br>
 <center>
 <img src="../../assets/import_scope.png" alt="Import Scope" width="600" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
 </center>
+<br>
+## Scans
+The **Scans** submenu within the **Target** page lets you initiate new scans for a specified scope and view results from past scans. The **Scan Schedule** table lists the currently scheduled scans along with their configurations This includes the selected ports, chosen tools, scan recurrence, and the specified collector.
+<br>
+<br>
+<center>
+<img src="../../assets/target_scans.png" alt="Target Scans" width="750" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center>
+<br>
+<br>
+To schedule a scan to be executed on the target, click on the click on the <img src="../../assets/add_btn.png" alt="Add button" width="30"> button  in the **Scan Schedule** dialog or the <img src="../../assets/scan_btn.png" alt="Scan button" width="30"> button on the target dialog menu. The **Network Scan** modal requires multiple parameters be configured before proceeding. First, select a [Collector](/collectors/collectors/) to perform the scan. Then, choose the **Hosts** to scan, which can either be the entire scope or specific IPs or subnets entered manually.. 
+<br>
+<br>
+<center>
+<img src="../../assets/scan_dlg.png" alt="Target Scans" width="450" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center>
+<br>
+<br>
+Likewise, you must select the **Ports** to scan. The drop-down list offers several predefined groups, or you can choose **Custom** to manually enter individual ports.
+<br>
+<br>
+<br>
+<center>
+<img src="../../assets/port_list.png" alt="Target Scans" width="450" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center>
+<br>
+<br>
+The **Schedule** drop-down list contains options for either a **One Time** scan or setting up a **Recurring** scan by defining the schedule using a cron-like format.
+<br>
+<br>
+<center>
+<img src="../../assets/scan_schedule.png" alt="Target Scans" width="450" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center>
+<br>
+<br>
+The **Passive Collection** container includes tools that gather data about a target from third-party sources without any direct interaction with the target network. The **Active Collection** container lists tools that communicate directly with the target.
+<br><br>
+Each of the selected [Tools](collectors/collectors/) will run with the default arguments specified in the **Resources**->**Tools** menu. To modify these default arguments for the scan, click on the <img src="../../assets/drop_dwn.png" alt="Add button" width="20" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">  button and enter the new arguments in the tool arguments input box. 
+<br>
+<br>
+<br>
+<center>
+<img src="../../assets/custom_args.png" alt="Target Scans" width="450" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center>
+<br>
+<br>
+After selecting the scan parameters, click the **Submit** button. This will add an entry to the **Scan Schedule** table.
+<br>
 <br>

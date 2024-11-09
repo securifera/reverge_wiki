@@ -21,6 +21,7 @@ nav:
     - Providers: settings/providers.md
     - Certificates: settings/certificates.md
     - Database: settings/database.md
+    - Logging: settings/logging.md
 
 
 theme:
