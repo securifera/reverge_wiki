@@ -1,4 +1,4 @@
-reverge is a red team focused, attack surface management framework
+reverge is a attack surface management (ASM) framework. One of its primary functions includes collecting information about a target's network through network scanning and open-source intelligence gathering. By thoroughly analyzing systems and networks, reverge identifies vulnerabilities, network services, web applications, and potential security risks that contribute to an organization's attack surface. It also enables an organization to actively track assets and exposures, assisting in the reduction of its attack surface, strengthening defenses and mitigating potential threats.
 
 
 

@@ -81,10 +81,12 @@ In the **Add Collector** dialog, select **Manual** in the **Provider** drop down
 <br>
 <br>
 <center>
-<img src="../../assets/add_collector_modal2.png" alt="Add Collector" width="500" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+<img src="../../assets/add_collector_modal2.png" alt="Add Collector" width="450" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
 </center>
-
+<br>
+<br>
 Click on the newly created collector in the table. Copy the value in the **API Key** field.
+<br>
 <br>
 <br>
 <center>

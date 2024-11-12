@@ -9,6 +9,7 @@ nav:
   - Home: index.md
   - Setup:
     - Database: setup/database.md
+  - Scans:  scans/scans.md
   - Targets:  targets/targets.md
   - Collectors: collectors/collectors.md
   - Resources: 
