@@ -12,13 +12,13 @@
         <meta name="author" content="Securifera">
       
       
-        <link rel="canonical" href="https://reverge.io/resources/modules/">
+        <link rel="canonical" href="https://reverge.io/scans/scans/">
       
       
-        <link rel="prev" href="../components/">
+        <link rel="prev" href="../../setup/database/">
       
       
-        <link rel="next" href="../tools/">
+        <link rel="next" href="../../targets/targets/">
       
       
       <link rel="icon" href="../../assets/reverge_icon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Modules - reverge wiki</title>
+        <title>Scans - reverge wiki</title>
       
     
     
@@ -65,11 +65,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Modules - reverge wiki" >
+        <meta  property="og:title"  content="Scans - reverge wiki" >
       
         <meta  property="og:description"  content="A Red Team Focused Attack Surface Management Framework" >
       
-        <meta  property="og:image"  content="https://reverge.io/assets/images/social/resources/modules.png" >
+        <meta  property="og:image"  content="https://reverge.io/assets/images/social/scans/scans.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -77,15 +77,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://reverge.io/resources/modules/" >
+        <meta  property="og:url"  content="https://reverge.io/scans/scans/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Modules - reverge wiki" >
+        <meta  name="twitter:title"  content="Scans - reverge wiki" >
       
         <meta  name="twitter:description"  content="A Red Team Focused Attack Surface Management Framework" >
       
-        <meta  name="twitter:image"  content="https://reverge.io/assets/images/social/resources/modules.png" >
+        <meta  name="twitter:image"  content="https://reverge.io/assets/images/social/scans/scans.png" >
       
     
     
@@ -104,6 +104,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#filter" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -136,7 +141,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Modules
+              Scans
             
           </span>
         </div>
@@ -246,9 +251,11 @@
         
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="../../scans/scans/" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
         
   
     
@@ -297,13 +304,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../components/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../resources/components/" class="md-tabs__link">
           
   
     
@@ -486,10 +491,28 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../scans/scans/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Scans
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -498,6 +521,33 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filter
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -546,10 +596,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -564,22 +612,21 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -590,7 +637,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Resources
@@ -604,7 +651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../components/" class="md-nav__link">
+      <a href="../../resources/components/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -622,17 +669,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../resources/modules/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -641,7 +681,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -654,7 +693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tools/" class="md-nav__link">
+      <a href="../../resources/tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -675,7 +714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../wordlists/" class="md-nav__link">
+      <a href="../../resources/wordlists/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -880,14 +919,38 @@
   
 
 
-  <h1>Modules</h1>
+  <h1>Scans</h1>
 
-<p>The <strong>Modules</strong> menu lists all the tool modules that are gleaned from scan results by reverge or manually defined. The purpose of this menu is to allow for the binding of modules to components. In other words, the execution of a specific module can be bound to the detection of a particular component. For example, if the <strong>nginx</strong> component is detected, execute the <strong>nginx-version</strong> nuclei module.
+<p>Scan results can be accessed from two different places in reverge. The main <strong>Dashboard</strong> menu lists scans that have been executed against any target in reverge. The second place is from the <strong>Targets</strong> menu under each specific target. After clicking on a target, click the <strong>Scans</strong> submenu in the top right dialog. To view the details of a scan, click on the corresponding row in the scan table. </p>
+<p>The default page will display basic details about the scan and list all hosts identified. This view will show the IP address for each host,  any domains associated with it, and the number of open ports detected.
 <br>
 <br>
 <center>
-<img src="../../assets/modules.png" alt="Modules Table" width="750" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
-</center></p>
+<img src="../../assets/scan_page.png" alt="Scan Page" width="750" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center>
+<br>
+<br>
+To access detailed information about each host's ports, click on the corresponding row in the table. This will open a detailed view showing all open ports for that host, the components running on them, and any screenshots that have been collected.
+<br>
+<br>
+<br>
+<center>
+<img src="../../assets/host_expand.png" alt="Host" width="750" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center>
+<br>
+<br></p>
+<h2 id="filter">Filter<a class="headerlink" href="#filter" title="Permanent link">#</a></h2>
+<p>If you're viewing a very large scan and need to filter the results, click on the <img src="../../assets/chevron.png" alt="Add button" width="30"> button located in the top-left corner of the screen. This will display a filter menu that provides a mechanism for narrowing down the displayed results according to your specific criteria.
+<br>
+<br>
+To filter the results, select the desired checkboxes and click the <strong>Filter</strong> button.
+<br>
+<br>
+<center>
+<img src="../../assets/scan_filter.png" alt="Host" width="650" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center>
+<br>
+<br></p>
 
 
 
@@ -926,7 +989,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../components/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Components">
+          <a href="../../setup/database/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Database">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -936,20 +999,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Components
+                Database
               </div>
             </div>
           </a>
         
         
           
-          <a href="../tools/" class="md-footer__link md-footer__link--next" aria-label="Next: Tools">
+          <a href="../../targets/targets/" class="md-footer__link md-footer__link--next" aria-label="Next: Targets">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Tools
+                Targets
               </div>
             </div>
             <div class="md-footer__button md-icon">
