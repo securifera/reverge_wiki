@@ -8,7 +8,7 @@ The default page will display basic details about the scan and list all hosts id
 </center>
 <br>
 <br>
-To access detailed information about each host's ports, click on the corresponding row in the table. This will open a detailed view showing all open ports for that host, the components running on them, and any screenshots that have been collected.
+To access detailed information about each host's ports, click on the corresponding row in the scan table. This will open a detailed view showing all open ports for that host, the components running on them, and any screenshots that have been collected.
 <br>
 <br>
 <br>
@@ -26,6 +26,15 @@ To filter the results, select the desired checkboxes and click the **Filter** bu
 <br>
 <center>
 <img src="../../assets/scan_filter.png" alt="Host" width="650" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center>
+<br>
+<br>
+## Port Details
+To view detailed information about each port, click on the corresponding row in the port table. This will open a detailed view listing the components associated with the port, domains extracted from TLS certificates, modules scan results, and HTTP endpoints and their respective screenshots.
+<br>
+<br>
+<center>
+<img src="../../assets/port_inst.png" alt="Port" width="750" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
 </center>
 <br>
 <br>

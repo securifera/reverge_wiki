@@ -1,4 +1,4 @@
-Providers are infrastructure services that provide resources to reverge for instantiating collectors. The most common providers include cloud services like [AWS](https://aws.amazon.com/) and locally hosted virtualization platforms like [Promox](https://www.proxmox.com/). A provider object contains the configuration details required to interact with these services, credentials, etc. Setting up a provider is the required first step before you can create a [collector](/collectors/setup/) and perform scans in reverge.
+Providers are infrastructure services that provide resources to reverge for instantiating collectors. The most common providers include cloud services like [AWS](https://aws.amazon.com/) and locally hosted virtualization platforms like [Promox](https://www.proxmox.com/). A Docker provider is also available, allowing collectors to be instantiated directly on the Reverge server. While this is the most convenient option, <b>it is recommended only for testing purposes</b> to prevent IP blocks or blacklisting that may occur due to network scanning. A provider object contains the configuration details required to interact with these services, credentials, etc. Setting up a provider is the required first step before you can create a [collector](/collectors/setup/) and perform scans in reverge.
 
 ## Add Provider
 To add a new provider to reverge click on the <img src="../../assets/add_btn.png" alt="Save button" width="30">  button in the top right corner of the Providers dialog.
@@ -9,7 +9,7 @@ To add a new provider to reverge click on the <img src="../../assets/add_btn.png
 </center>
 <br>
 <br>
-Next, populate the fields in the **Add Provider** dialog. For the virtualization providers, this will include an identifier for the VM image to use and the SSH user to be provisioned. Then, click **Save**.
+Next, populate the fields in the **Add Provider** dialog. For the virtualization providers, this will include an identifier for the VM image to use and the SSH user to be provisioned. Then, click **Save**. When setting up an AWS provider, a more secure alternative to supplying an AWS Secret Key is to attach an AWS IAM Role to the reverge EC2 instance. This role should include the necessary EC2 permissions for creating and deleting virtual machines and supporting network infrastructure. A new IAM policy can be created with these permissions and added to the existing role created for the [Secrets Manager](http://192.168.110.116:8000/#secrets-manager)
 <br>
 <br>
 <center>

@@ -23,8 +23,16 @@ To remove a target from reverge, select the checkbox to the left of the target n
 <center>
 <img src="../../assets/target_delete.png" alt="Delete Target" width="750" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
 </center>
+## Hosts
+After setting up the target, you will be taken to the target dashboard. This dashboard displays key metrics about the target and provides a comprehensive list of all detected hosts.
+<br>
+<br>
+<center>
+<img src="../../assets/target_hosts.png" alt="Target Hosts" width="750" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center>
+<br>
 ## Scope
-After creating the target, you’ll be redirected to the target dashboard, where you can set the target's scope. Subnets, Domains, and URLs can be added to the scope individually by clicking on the respective <img src="../../assets/add_btn.png" alt="Add button" width="30"> button.
+The Scope submenu lets you define the target's scope. Subnets, Domains, and URLs can be added to the scope individually by clicking on the respective <img src="../../assets/add_btn.png" alt="Add button" width="30"> button.
 <br>
 <br>
 <center>

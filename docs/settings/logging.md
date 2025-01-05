@@ -1,5 +1,5 @@
 
-The Logging menu on the Settings page can be used for troubleshooting issues encountered when using reverge. The **Server Logs** dialog displays the last 1000 lines of the reverge server log.
+The Logging menu on the Settings page can be used for troubleshooting issues encountered when using reverge. The **Server Logs** dialog displays the last 1000 lines of the selected server log.
 <br>
 <br>
 <br>

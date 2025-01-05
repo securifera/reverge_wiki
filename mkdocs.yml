@@ -19,10 +19,13 @@ nav:
     - Wordlists: resources/wordlists.md
   - Settings: 
     - Users: settings/users.md
+    - Collectors: settings/collectors.md
     - Providers: settings/providers.md
     - Certificates: settings/certificates.md
     - Database: settings/database.md
     - Logging: settings/logging.md
+  - Integrations:  integrations/integrations.md
+  - Help:  help/help.md
 
 
 theme:
