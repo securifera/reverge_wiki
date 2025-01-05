@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://reverge.io/settings/providers/">
       
       
-        <link rel="prev" href="../users/">
+        <link rel="prev" href="../collectors/">
       
       
         <link rel="next" href="../certificates/">
@@ -338,6 +338,40 @@
         </a>
       </li>
     
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../integrations/integrations/" class="md-tabs__link">
+        
+  
+    
+  
+  Integrations
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../help/help/" class="md-tabs__link">
+        
+  
+    
+  
+  Help
+
+      </a>
+    </li>
   
 
       
@@ -711,6 +745,8 @@
       
         
       
+        
+      
     
     
       
@@ -759,6 +795,27 @@
   
   <span class="md-ellipsis">
     Users
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../collectors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Collectors
   </span>
   
 
@@ -922,6 +979,46 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/integrations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Integrations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../help/help/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Help
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -942,7 +1039,7 @@
 
   <h1>Providers</h1>
 
-<p>Providers are infrastructure services that provide resources to reverge for instantiating collectors. The most common providers include cloud services like <a href="https://aws.amazon.com/">AWS</a> and locally hosted virtualization platforms like <a href="https://www.proxmox.com/">Promox</a>. A provider object contains the configuration details required to interact with these services, credentials, etc. Setting up a provider is the required first step before you can create a <a href="/collectors/setup/">collector</a> and perform scans in reverge.</p>
+<p>Providers are infrastructure services that provide resources to reverge for instantiating collectors. The most common providers include cloud services like <a href="https://aws.amazon.com/">AWS</a> and locally hosted virtualization platforms like <a href="https://www.proxmox.com/">Promox</a>. A Docker provider is also available, allowing collectors to be instantiated directly on the Reverge server. While this is the most convenient option, <b>it is recommended only for testing purposes</b> to prevent IP blocks or blacklisting that may occur due to network scanning. A provider object contains the configuration details required to interact with these services, credentials, etc. Setting up a provider is the required first step before you can create a <a href="/collectors/setup/">collector</a> and perform scans in reverge.</p>
 <h2 id="add-provider">Add Provider<a class="headerlink" href="#add-provider" title="Permanent link">#</a></h2>
 <p>To add a new provider to reverge click on the <img src="../../assets/add_btn.png" alt="Save button" width="30">  button in the top right corner of the Providers dialog.
 <br>
@@ -952,7 +1049,7 @@
 </center>
 <br>
 <br>
-Next, populate the fields in the <strong>Add Provider</strong> dialog. For the virtualization providers, this will include an identifier for the VM image to use and the SSH user to be provisioned. Then, click <strong>Save</strong>.
+Next, populate the fields in the <strong>Add Provider</strong> dialog. For the virtualization providers, this will include an identifier for the VM image to use and the SSH user to be provisioned. Then, click <strong>Save</strong>. When setting up an AWS provider, a more secure alternative to supplying an AWS Secret Key is to attach an AWS IAM Role to the reverge EC2 instance. This role should include the necessary EC2 permissions for creating and deleting virtual machines and supporting network infrastructure. A new IAM policy can be created with these permissions and added to the existing role created for the <a href="http://192.168.110.116:8000/#secrets-manager">Secrets Manager</a>
 <br>
 <br>
 <center>
@@ -1005,7 +1102,7 @@ Next, populate the fields in the <strong>Add Provider</strong> dialog. For the v
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../users/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Users">
+          <a href="../collectors/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Collectors">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1015,7 +1112,7 @@ Next, populate the fields in the <strong>Add Provider</strong> dialog. For the v
                 Previous
               </span>
               <div class="md-ellipsis">
-                Users
+                Collectors
               </div>
             </div>
           </a>
