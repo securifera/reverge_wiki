@@ -12,13 +12,13 @@
         <meta name="author" content="Securifera">
       
       
-        <link rel="canonical" href="https://reverge.io/resources/wordlists/">
+        <link rel="canonical" href="https://reverge.io/setup/authentication/">
       
       
-        <link rel="prev" href="../tools/">
+        <link rel="prev" href="../database/">
       
       
-        <link rel="next" href="../../settings/users/">
+        <link rel="next" href="../../scans/scans/">
       
       
       <link rel="icon" href="../../assets/reverge_icon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Wordlists - reverge wiki</title>
+        <title>Authentication - reverge wiki</title>
       
     
     
@@ -65,11 +65,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Wordlists - reverge wiki" >
+        <meta  property="og:title"  content="Authentication - reverge wiki" >
       
         <meta  property="og:description"  content="A Red Team Focused Attack Surface Management Framework" >
       
-        <meta  property="og:image"  content="https://reverge.io/assets/images/social/resources/wordlists.png" >
+        <meta  property="og:image"  content="https://reverge.io/assets/images/social/setup/authentication.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -77,15 +77,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://reverge.io/resources/wordlists/" >
+        <meta  property="og:url"  content="https://reverge.io/setup/authentication/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Wordlists - reverge wiki" >
+        <meta  name="twitter:title"  content="Authentication - reverge wiki" >
       
         <meta  name="twitter:description"  content="A Red Team Focused Attack Surface Management Framework" >
       
-        <meta  name="twitter:image"  content="https://reverge.io/assets/images/social/resources/wordlists.png" >
+        <meta  name="twitter:image"  content="https://reverge.io/assets/images/social/setup/authentication.png" >
       
     
     
@@ -104,6 +104,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#multi-factor-authentication-mfa" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -136,7 +141,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Wordlists
+              Authentication
             
           </span>
         </div>
@@ -226,11 +231,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../setup/database/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../database/" class="md-tabs__link">
           
   
     
@@ -297,13 +304,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../components/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../resources/components/" class="md-tabs__link">
           
   
     
@@ -446,8 +451,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -458,21 +465,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -483,7 +491,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Setup
@@ -497,7 +505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/database/" class="md-nav__link">
+      <a href="../database/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -515,10 +523,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../setup/authentication/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Authentication
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -527,6 +553,33 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#multi-factor-authentication-mfa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-factor Authentication (MFA)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -603,10 +656,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -621,22 +672,21 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -647,7 +697,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Resources
@@ -661,7 +711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../components/" class="md-nav__link">
+      <a href="../../resources/components/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -682,7 +732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../modules/" class="md-nav__link">
+      <a href="../../resources/modules/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -703,7 +753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tools/" class="md-nav__link">
+      <a href="../../resources/tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -721,17 +771,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../resources/wordlists/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -740,7 +783,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1000,14 +1042,65 @@
   
 
 
-  <h1>Wordlists</h1>
+  <h1>Authentication</h1>
 
-<p>The <strong>Wordlists</strong> menu includes two sub-menus: <strong>Groups</strong> and <strong>List Items</strong>. <strong>List Items</strong> are unique strings that can be organized into <strong>Groups</strong> and used as wordlists for various tools in Reverge. Some example <strong>List Items</strong> include website endpoints, HTTP requests parameters, usernames, and passwords.
+<p>To login to the reverge application, enter the username and password and click the <strong>Login</strong> button.
 <br>
 <br>
 <center>
-<img src="../../assets/wordlists_items.png" alt="Wordlists Table" width="750" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
-</center></p>
+<img src="../../assets/login.png" alt="Login" width="600" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center>
+<br>
+<br>
+If you’re having trouble logging in or recalling your password, select <strong>Forgot Password</strong>. Enter the reverge username and click the <strong>Submit</strong> button. 
+<br>
+<br>
+<center>
+<img src="../../assets/forgot_pw.png" alt="Login" width="300" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center>
+<br>
+If the username entered has an associated email address, password reset instructions will be sent to that address.
+<br>
+<br>
+<center>
+<img src="../../assets/reset_email.png" alt="Login" width="400" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center>
+<br>
+<br>
+Clicking the <strong>Reset Password</strong> button in the email will display a reset password dialog that will allow for updating the user's password. Enter the new password and click the <strong>Submit</strong> button.
+<br>
+<br>
+<center>
+<img src="../../assets/reset_pw.png" alt="Login" width="300" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center>
+<br>
+<br></p>
+<h2 id="multi-factor-authentication-mfa">Multi-factor Authentication (MFA)<a class="headerlink" href="#multi-factor-authentication-mfa" title="Permanent link">#</a></h2>
+<p>Multi-factor authentication is mandatory for all users to enhance security. Upon first login, the MFA setup page will be displayed with registration instructions for the reverge application in Google Authenticator or a similar app. 
+<br>
+<br>
+<center>
+<img src="../../assets/register_mfa.png" alt="Login" width="380" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center>
+<br>
+In the event that the user loses access to their authenticator app, backup codes are provided that can be used for one-time login to the reverge application. This provides a mechanism for resetting MFA if necessary. After registering the reverge MFA QR code and saving the backup codes, click the <strong>Next</strong> button.
+<br><br>
+The following dialog will prompt for the authentication code provided by the Authenticator app for the reverge user. Once you have entered the code, click the <strong>Verify</strong> button.
+<br>
+<br>
+<center>
+<img src="../../assets/mfa_login.png" alt="Login" width="300" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center>
+<br>
+If you have lost access to the authenticator code generator for the reverge user, click <strong>I want to use a backup code</strong> and a dialog will be presented that allows for entering one of the backup codes listed during MFA registration.
+<br>
+<br>
+<center>
+<img src="../../assets/mfa_backup_code.png" alt="Login" width="300" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center>
+<br>
+<br>
+Enter a backup code and click the <strong>Verify</strong> button to proceed.</p>
 
 
 
@@ -1046,7 +1139,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../tools/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Tools">
+          <a href="../database/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Database">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1056,20 +1149,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Tools
+                Database
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../settings/users/" class="md-footer__link md-footer__link--next" aria-label="Next: Users">
+          <a href="../../scans/scans/" class="md-footer__link md-footer__link--next" aria-label="Next: Scans">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Users
+                Scans
               </div>
             </div>
             <div class="md-footer__button md-icon">
