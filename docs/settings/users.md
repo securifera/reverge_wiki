@@ -30,3 +30,15 @@ To update an existing user's password or privileges, click on the user in the Us
 <center>
 <img src="../../assets/user_settings.png" alt="User settings" width="750" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
 </center>
+<br>
+<br>
+To reset the selected user's multi-factor secret, click on the <img src="../../assets/reset_mfa_btn.png" alt="Save button" width="30"> button. The MFA registration flow will be initiated on the next successful login.
+## Profile
+Updates to the current user's email address, password, and MFA can be done from the **User->Profile** menu on the top of the screen.
+<br>
+<br>
+<center>
+<img src="../../assets/user_profile.png" alt="User Profile" width="650" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center>
+<br>
+<br>

@@ -3,12 +3,13 @@ site_description: A Red Team Focused Attack Surface Management Framework
 site_author: Securifera
 site_url: https://reverge.io
 repo_url: https://github.com/securifera/reverge_wiki
-copyright: Copyright &copy; 2024 Securifera, Inc
+copyright: Copyright &copy; 2025 Securifera, Inc
 
 nav:
   - Home: index.md
   - Setup:
     - Database: setup/database.md
+    - Authentication: setup/authentication.md
   - Scans:  scans/scans.md
   - Targets:  targets/targets.md
   - Collectors: collectors/collectors.md
