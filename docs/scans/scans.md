@@ -17,6 +17,15 @@ To access detailed information about each host's ports, click on the correspondi
 </center>
 <br>
 <br>
+## Jobs
+If you want details on what scan jobs have been executed in the particular scan, click on the **Jobs** menu at the top right of the scan page. This table will display each tool that was executed, any additional arguments, the target hosts/domains/ports, and the execution status. This table can be exported in JSON format by clicking the <img src="../../assets/download_btn.png" alt="Export button" width="30"> button. To view up-to-date scan logs related to the execution of scan jobs, visit the collector details panel for the associated [Collector](/collectors/collectors/#manage-collector)
+<br>
+<br>
+<center>
+<img src="../../assets/scan_jobs.png" alt="Host" width="750" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center>
+<br>
+<br>
 ## Filter
 If you're viewing a very large scan and need to filter the results, click on the <img src="../../assets/chevron.png" alt="Add button" width="30"> button located in the top-left corner of the screen. This will display a filter menu that provides a mechanism for narrowing down the displayed results according to your specific criteria.
 <br>

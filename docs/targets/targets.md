@@ -84,7 +84,7 @@ The **Schedule** drop-down list contains options for either a **One Time** scan 
 <br>
 The **Passive Collection** container includes tools that gather data about a target from third-party sources without any direct interaction with the target network. The **Active Collection** container lists tools that communicate directly with the target.
 <br><br>
-Each of the selected [Tools](collectors/collectors/) will run with the default arguments specified in the **Resources**->**Tools** menu. To modify these default arguments for the scan, click on the <img src="../../assets/drop_dwn.png" alt="Add button" width="20" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">  button and enter the new arguments in the tool arguments input box. 
+Each of the selected [Tools](/resources/tools) will run with the default arguments specified in the **Resources**->**Tools** menu. To modify these default arguments for the scan, click on the <img src="../../assets/drop_dwn.png" alt="Add button" width="20" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">  button and enter the new arguments in the tool arguments input box. 
 <br>
 <br>
 <br>

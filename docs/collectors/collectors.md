@@ -55,6 +55,14 @@ The Collectors menu is where you configure settings and perform various operatio
   <span>Destroys the collector</span>
 </div>
 To update a collector's configuration, edit one of the fields in the **Configuration** dialog and click on the <img src="../../assets/save_btn.png" alt="Save button" width="30">  button in the top right corner of the Configuration dialog.
+<br>
+The Collector Logs dialog enables monitoring of collector deployment and teardown processes. It also displays collector logs generated during scan operations. For more detailed information, consider using the remote access feature for troubleshooting or performing manual scan activities.
+<br>
+<br>
+<center>
+<img src="../../assets/collector_logs.png" alt="Collector Logs" width="500" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center>
+
 ## Remote Access
 If you click on the <img src="../../assets/term_btn.png" alt="Save button" width="30"> button, a new window will be opened that renders a virtual remote shell on the selected collector. This interface can be used to troubleshoot issues with the collector or manually execute commands.
 <br>

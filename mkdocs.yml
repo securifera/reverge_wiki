@@ -20,6 +20,7 @@ nav:
     - Wordlists: resources/wordlists.md
   - Settings: 
     - Users: settings/users.md
+    - Groups: settings/groups.md
     - Collectors: settings/collectors.md
     - Providers: settings/providers.md
     - Certificates: settings/certificates.md
