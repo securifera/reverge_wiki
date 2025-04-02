@@ -105,6 +105,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#shodan" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -968,6 +973,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Integrations
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -977,6 +993,47 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#shodan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shodan
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shodan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Results
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1022,7 +1079,32 @@
 
   <h1>Integrations</h1>
 
-
+<p>An integration in reverge is a custom plugin designed to enhance the platform’s capabilities by connecting to third-party services. It fetches external data and makes it easy to import that information back into reverge for further analysis. 
+<br>
+<br>
+<center>
+<img src="../../assets/integrations_table.png" alt="Integrations Table" width="750" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center>
+<br>
+<br></p>
+<h2 id="shodan">Shodan<a class="headerlink" href="#shodan" title="Permanent link">#</a></h2>
+<p>The Shodan integration provides an interface for executing custom Shodan queries. The <strong>Type</strong> field has a predefined set of query filters that can be selected. After selecting a type and entering the search value, click the <strong>Search</strong> button to execute the query. An entry will be created in the <strong>Shodan Query Results</strong> table that can be selected to review the results.
+<br>
+<br>
+<center>
+<img src="../../assets/shodan_search.png" alt="Integrations Table" width="750" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center>
+<br>
+<br></p>
+<h3 id="results">Results<a class="headerlink" href="#results" title="Permanent link">#</a></h3>
+<p>If you click on an entry in the <strong>Shodan Query Results</strong> table, you will be redirected to a new page that displays the results delivered from Shodan. The <strong>Shodan Results</strong> table lists basic information about each result to include IP Address, Port, Status Code, Domains, Certificates, etc.
+<br>
+<br>
+<center>
+<img src="../../assets/shodan_results.png" alt="Integrations Table" width="750" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center>
+<br>
+<br></p>
 
 
 
