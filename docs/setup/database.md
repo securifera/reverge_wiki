@@ -21,7 +21,7 @@ After the self-hosted MySQL is installed and configured, execute the provided SS
 <br>
 <br>
 ```
-ssh -i priv_key restricted_user@REVERGE_IP_ADDRESS -p22222 -N -R 3306:*:3306
+ssh -i priv_key restricted_user@REVERGE_IP_ADDRESS -p22 -N -R 3306:*:3306
 ```
 <br>
 Once the connection has been made, enter in the database connection information and click the **Connect** button.
