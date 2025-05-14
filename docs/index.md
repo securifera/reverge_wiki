@@ -5,7 +5,7 @@ reverge is a attack surface management (ASM) framework. One of its primary funct
 
 ## Installation
 
-Goto [Amazon Marketplace](https://aws.amazon.com/marketplace/pp/prodview-6z2kypjrj3ehk) Amazon Marketplace and deploy a reverge instance
+Goto [Amazon Marketplace](https://aws.amazon.com/marketplace/pp/prodview-6z2kypjrj3ehk) and deploy a reverge instance
 
 
 **When configuring the security groups for the EC2 instance consider the following:**
