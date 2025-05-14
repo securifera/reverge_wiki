@@ -1046,7 +1046,7 @@ If <strong>Remote Database</strong> is selected, the following page will be disp
 After the self-hosted MySQL is installed and configured, execute the provided SSH port forward command from the MySQL server to connect it to the reverge server. Be sure to replace REVERGE_IP_ADDRESS with the reverge server IP address.
 <br>
 <br>
-<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ssh -i priv_key restricted_user@REVERGE_IP_ADDRESS -p22222 -N -R 3306:*:3306
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ssh -i priv_key restricted_user@REVERGE_IP_ADDRESS -p22 -N -R 3306:*:3306
 </code></pre></div>
 <br>
 Once the connection has been made, enter in the database connection information and click the <strong>Connect</strong> button.
