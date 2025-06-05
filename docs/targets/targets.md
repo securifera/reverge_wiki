@@ -65,7 +65,7 @@ To schedule a scan to be executed on the target, click on the click on the <img 
 </center>
 <br>
 <br>
-Likewise, you must select the **Ports** to scan. The drop-down list offers several predefined groups, or you can choose **Custom** to manually enter individual ports.
+Likewise, you must select the **Ports** to scan. The drop-down list offers several predefined groups, or you can choose **Custom** to manually enter individual ports. Manually entered **Custom** ports can be space or comma delimited and include ranges, e.g. 1-1000.
 <br>
 <br>
 <br>

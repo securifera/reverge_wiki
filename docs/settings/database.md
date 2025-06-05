@@ -15,3 +15,6 @@ The import process is the mirror operation to the database export feature and ex
 <br>
 <img src="../../assets/import_db.png" alt="Import DB" width="450" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
 </center>
+<br>
+<br>
+<span style="color: red;">**If you are importing a database with active collectors, make sure you update the collector cloud firewall rules to point to your new reverge IP address if it is changing or you won't be able to connect to the collectors.**.</span>
