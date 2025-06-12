@@ -10,7 +10,7 @@ Reverge is a proprietary security tool developed by **Securifera** to help secur
 
 ## 📘 Documentation
 
-Check the **Wiki** tab for guides, tutorials, and technical reference material on setting up and using Reverge effectively.
+Check the [Wiki](https://www.reverge.io/) for guides, tutorials, and technical reference material on setting up and using Reverge effectively.
 
 ## 🐛 Issues and Feedback
 
