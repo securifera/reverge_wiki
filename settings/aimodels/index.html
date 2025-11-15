@@ -1035,6 +1035,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Ollama Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#remote-ollama-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remote Ollama Setup
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1222,7 +1237,17 @@
 <br>
 - <strong>Embeddings Model</strong>: Specify the model for text embeddings (e.g., <code>mxbai-embed-large</code>)
 <br>
-- <strong>Ollama Host URL</strong>: The URL of your Ollama server (e.g., <code>http://localhost:11434</code>)</p>
+- <strong>Ollama Host URL</strong>: The URL of your Ollama server (e.g., <code>http://192.168.110.100:8080</code>)
+<br>
+<br></p>
+<h3 id="remote-ollama-setup">Remote Ollama Setup<a class="headerlink" href="#remote-ollama-setup" title="Permanent link">#</a></h3>
+<p>For locally hosted Ollama instances, you can set up SSH port forwarding to connect your local Ollama server to the reverge server, similar to the remote database configuration. Execute the following SSH port forward command from your local machine where Ollama is running. Be sure to replace REVERGE_IP_ADDRESS with the reverge server IP address.
+<br>
+<br>
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ssh -i priv_key ubuntu@REVERGE_IP_ADDRESS -p22 -N -R 8181:127.0.0.1:8080
+</code></pre></div>
+<br>
+Once the port forward connection is established, configure the <strong>Ollama Host URL</strong> to use the forwarded port (e.g., <code>http://localhost:8181</code>).</p>
 <h2 id="configuration-steps">Configuration Steps<a class="headerlink" href="#configuration-steps" title="Permanent link">#</a></h2>
 <ol>
 <li><strong>Select AI Provider</strong>: Choose your preferred AI provider from the dropdown menu</li>
