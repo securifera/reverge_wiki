@@ -52,7 +52,18 @@ For the **Ollama** provider, configure the chat model, embeddings model, and hos
 <br>
 - **Embeddings Model**: Specify the model for text embeddings (e.g., `mxbai-embed-large`)
 <br>
-- **Ollama Host URL**: The URL of your Ollama server (e.g., `http://localhost:11434`)
+- **Ollama Host URL**: The URL of your Ollama server (e.g., `http://192.168.110.100:8080`)
+<br>
+<br>
+### Remote Ollama Setup
+For locally hosted Ollama instances, you can set up SSH port forwarding to connect your local Ollama server to the reverge server, similar to the remote database configuration. Execute the following SSH port forward command from your local machine where Ollama is running. Be sure to replace REVERGE_IP_ADDRESS with the reverge server IP address.
+<br>
+<br>
+```
+ssh -i priv_key ubuntu@REVERGE_IP_ADDRESS -p22 -N -R 8181:127.0.0.1:8080
+```
+<br>
+Once the port forward connection is established, configure the **Ollama Host URL** to use the forwarded port (e.g., `http://localhost:8181`).
 
 
 ## Configuration Steps
