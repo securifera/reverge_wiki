@@ -13,7 +13,7 @@ Next, fill out the **Add Collector** dialog by entering the new collector's name
 
 - `Scanner` Installs the reverge [collector](https://github.com/securifera/reverge_collector) tools required for scanning targets.
 - `Extender` No additional tools are installed. This template is typically used to setup a SSH tunnel to an unreachable Collector.
-- `DNS` Registers DNS records for the given domain. *Currently only supports Njalla.*
+- `Responder` Installs Interactsh server and various tools for catching exploitation interactions. Also registers DNS records for the given domain. *Currently only supports AWS Route 53 and Njalla for DNS registration.*
 <br>
 <br>
 <center>
