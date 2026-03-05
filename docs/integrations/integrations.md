@@ -19,10 +19,21 @@ The **Configuration** panel allows you to set up your Interactsh server connecti
 - **Nonce Length**: Length of the nonce component (default: 13, minimum: 3)
 
 Click the **Save** button to persist your configuration.
-
+<br>
+<br>
+<center>
+<img src="../../assets/interactsh_config.png" alt="Integrations Table" width="650" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center>
+<br>
+<br>
 ### Payload URLs
 The **Payload URLs** panel displays all registered payloads. Click **Add** to register a new payload with your configured Interactsh server, or select payloads and click **Delete** to deregister them.
-
+<br>
+<br>
+<center>
+<img src="../../assets/interactsh_payloads.png" alt="Integrations Table" width="450" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center>
+<br>
 ### Interactions
 The **Interactions** table displays all received out-of-band interactions from your payloads, including:
 
@@ -33,7 +44,13 @@ The **Interactions** table displays all received out-of-band interactions from y
 - **Created**: Timestamp when the interaction was received
 
 Click on an interaction row to view the full **Request** and **Response** details in the panels below.
-
+<br>
+<br>
+<center>
+<img src="../../assets/interactions.png" alt="Integrations Table" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center>
+<br>
+<br>
 <br>
 <br>
 ## Shodan
