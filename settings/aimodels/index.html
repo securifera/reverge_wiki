@@ -1053,6 +1053,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#snowflake-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Snowflake Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#configuration-steps" class="md-nav__link">
     <span class="md-ellipsis">
       Configuration Steps
@@ -1271,7 +1280,7 @@
 
   <h1>AI Models</h1>
 
-<p>To configure AI model integration for the reverge chat functionality, select the appropriate AI provider and configure the required settings. There are four supported AI providers: <strong>OpenAI</strong>, <strong>Anthropic</strong>, <strong>Google</strong>, and <strong>Ollama</strong>.
+<p>To configure AI model integration for the reverge chat functionality, select the appropriate AI provider and configure the required settings. There are five supported AI providers: <strong>OpenAI</strong>, <strong>Anthropic</strong>, <strong>Google</strong>, <strong>Ollama</strong>, and <strong>Snowflake</strong>.
 <br>
 <br>
 <center>
@@ -1289,9 +1298,7 @@
 <br>
 - <strong>Embeddings Model</strong>: Specify the model for text embeddings (e.g., <code>text-embedding-3-small</code>)
 <br>
-- <strong>API Token</strong>: Your OpenAI API key for authentication
-<br>
-- <strong>Max Input Tokens</strong>: Optional limit on the number of tokens sent to the model per request. Leave blank to use the model default.</p>
+- <strong>API Token</strong>: Your OpenAI API key for authentication</p>
 <h2 id="anthropic-configuration">Anthropic Configuration<a class="headerlink" href="#anthropic-configuration" title="Permanent link">#</a></h2>
 <p>For the <strong>Anthropic</strong> provider, configure the chat model and API token. Anthropic's Claude models provide advanced conversational AI capabilities.
 <br>
@@ -1300,9 +1307,7 @@
 <br>
 - <strong>Chat Model</strong>: Specify the Anthropic model (e.g., <code>claude-sonnet-4-5</code>, <code>claude-haiku-4-5</code>)
 <br>
-- <strong>API Token</strong>: Your Anthropic API key for authentication
-<br>
-- <strong>Max Input Tokens</strong>: Optional limit on the number of tokens sent to the model per request. Leave blank to use the model default.</p>
+- <strong>API Token</strong>: Your Anthropic API key for authentication</p>
 <h2 id="google-gemini-configuration">Google Gemini Configuration<a class="headerlink" href="#google-gemini-configuration" title="Permanent link">#</a></h2>
 <p>For the <strong>Google</strong> provider, configure the chat model, embeddings model, and API token. Google's Gemini models offer multimodal AI capabilities.
 <br>
@@ -1314,8 +1319,6 @@
 - <strong>Embeddings Model</strong>: Specify the model for text embeddings (e.g., <code>gemini-embedding-001</code>)
 <br>
 - <strong>API Token</strong>: Your Google AI API key for authentication
-<br>
-- <strong>Max Input Tokens</strong>: Optional limit on the number of tokens sent to the model per request. Leave blank to use the model default.
 <br></p>
 <h2 id="ollama-configuration">Ollama Configuration<a class="headerlink" href="#ollama-configuration" title="Permanent link">#</a></h2>
 <p>For the <strong>Ollama</strong> provider, configure the chat model, embeddings model, and host URL. Ollama allows you to run large language models locally or on your own infrastructure.
@@ -1329,8 +1332,6 @@
 <br>
 - <strong>Ollama Host URL</strong>: The URL of your Ollama server (e.g., <code>http://192.168.110.100:8080</code>)
 <br>
-- <strong>Max Input Tokens</strong>: Optional limit on the number of tokens sent to the model per request. Leave blank to use the model default.
-<br>
 <br></p>
 <h3 id="remote-ollama-setup">Remote Ollama Setup<a class="headerlink" href="#remote-ollama-setup" title="Permanent link">#</a></h3>
 <p>For locally hosted Ollama instances, you can set up SSH port forwarding to connect your local Ollama server to the reverge server, similar to the remote database configuration. Execute the following SSH port forward command from your local machine where Ollama is running. Be sure to replace REVERGE_IP_ADDRESS with the reverge server IP address.
@@ -1340,18 +1341,28 @@
 </code></pre></div>
 <br>
 Once the port forward connection is established, configure the <strong>Ollama Host URL</strong> to use the forwarded port (e.g., <code>http://localhost:8181</code>).</p>
+<h2 id="snowflake-configuration">Snowflake Configuration<a class="headerlink" href="#snowflake-configuration" title="Permanent link">#</a></h2>
+<p>For the <strong>Snowflake</strong> provider, configure the chat model, Personal Access Token, and account identifier. Snowflake Cortex AI provides access to enterprise-grade frontier models including Claude, hosted within your Snowflake environment.
+<br>
+<br>
+<strong>Configuration Fields:</strong>
+<br>
+- <strong>Chat Model</strong>: Specify the Snowflake Cortex model (e.g., <code>claude-sonnet-4-5</code>, <code>claude-opus-4-5</code>)
+<br>
+- <strong>Personal Access Token (PAT)</strong>: Your Snowflake Personal Access Token for authentication
+<br>
+- <strong>Account Identifier</strong>: Your Snowflake account identifier (e.g., <code>myorg-myaccount</code>). The full hostname is resolved automatically.</p>
 <h2 id="configuration-steps">Configuration Steps<a class="headerlink" href="#configuration-steps" title="Permanent link">#</a></h2>
 <ol>
 <li><strong>Select AI Provider</strong>: Choose your preferred AI provider from the dropdown menu</li>
 <li><strong>Configure Models</strong>: Enter the appropriate model names for your selected provider</li>
-<li><strong>Set Authentication</strong>: Provide the required API token or host URL</li>
-<li><strong>Set Max Input Tokens</strong> <em>(optional)</em>: Enter a token limit to cap context size</li>
+<li><strong>Set Authentication</strong>: Provide the required API token, PAT, or host URL</li>
 <li><strong>Save Settings</strong>: Click the <img src="../../assets/save_btn.png" alt="Save button" width="25"> button to apply the configuration</li>
 </ol>
 <hr />
 <h2 id="backend-engine">Backend Engine<a class="headerlink" href="#backend-engine" title="Permanent link">#</a></h2>
 <p>Reverge uses <a href="https://github.com/block/goose"><strong>Goose</strong></a> as the AI agent engine that powers the chat assistant. Goose is an open-source, agentic AI framework that manages tool execution, context, and multi-step reasoning on top of the configured LLM provider. The <code>goosed</code> process runs as a local service on the Reverge server; the chat panel communicates with it over a secure internal API.</p>
-<p>Goose's provider-agnostic design is what allows Reverge to support OpenAI, Anthropic, Google, and Ollama through a single settings panel.</p>
+<p>Goose's provider-agnostic design is what allows Reverge to support OpenAI, Anthropic, Google, Ollama, and Snowflake through a single settings panel.</p>
 <hr />
 <h2 id="agents">Agents<a class="headerlink" href="#agents" title="Permanent link">#</a></h2>
 <p>Agents are named AI personas with a custom system prompt. When a user selects an agent in the chat panel, that agent's prompt is injected into the session, shaping how the assistant behaves and what it focuses on.</p>

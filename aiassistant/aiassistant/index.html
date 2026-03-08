@@ -1175,6 +1175,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#chat-history-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chat History Panel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#panel-management" class="md-nav__link">
     <span class="md-ellipsis">
       Panel Management
@@ -1488,10 +1497,10 @@
 - <strong>Vulnerability Data</strong>: The assistant can reference current vulnerability findings</p>
 <h3 id="chat-persistence"><strong>Chat Persistence</strong><a class="headerlink" href="#chat-persistence" title="Permanent link">#</a></h3>
 <ul>
-<li><strong>Session Storage</strong>: Your chat history persists throughout your browser session</li>
-<li><strong>Automatic Saving</strong>: Conversations are saved automatically every 30 seconds</li>
-<li><strong>Page Navigation</strong>: Chat history is maintained when navigating between pages</li>
-<li><strong>Session Timeout</strong>: Chat data is automatically cleared after 24 hours</li>
+<li><strong>Server-Side Storage</strong>: Chat history is saved to the Reverge database and persists across sessions, devices, and browser restarts</li>
+<li><strong>Per-User History</strong>: All conversations are scoped to your account and only visible to you</li>
+<li><strong>Session Browser</strong>: Access previous conversations at any time using the history panel</li>
+<li><strong>Automatic Continuation</strong>: Returning to the assistant resumes where you left off in your most recent session</li>
 </ul>
 <h3 id="streaming-responses"><strong>Streaming Responses</strong><a class="headerlink" href="#streaming-responses" title="Permanent link">#</a></h3>
 <ul>
@@ -1500,6 +1509,13 @@
 <li><strong>Connection Recovery</strong>: Automatic handling of connection issues</li>
 </ul>
 <h2 id="advanced-features">Advanced Features<a class="headerlink" href="#advanced-features" title="Permanent link">#</a></h2>
+<h3 id="chat-history-panel"><strong>Chat History Panel</strong><a class="headerlink" href="#chat-history-panel" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Browse Sessions</strong>: Click the history button (🕐) in the header to open the history sidebar listing all previous conversations</li>
+<li><strong>Resume a Session</strong>: Click any session in the list to load its messages and continue the conversation</li>
+<li><strong>Search History</strong>: Use the search bar in the history panel to run a full-text search across all past messages</li>
+<li><strong>Delete Sessions</strong>: Remove individual sessions from the history panel using the delete button next to each entry</li>
+</ul>
 <h3 id="panel-management"><strong>Panel Management</strong><a class="headerlink" href="#panel-management" title="Permanent link">#</a></h3>
 <ul>
 <li>
@@ -1584,12 +1600,10 @@
 <h2 id="chat-controls">Chat Controls<a class="headerlink" href="#chat-controls" title="Permanent link">#</a></h2>
 <h3 id="header-controls"><strong>Header Controls</strong><a class="headerlink" href="#header-controls" title="Permanent link">#</a></h3>
 <ul>
-<li>
-<p><strong>Clear Chat</strong> (🗑️): Remove all messages and start a fresh conversation</p>
-</li>
-<li>
-<p><strong>Settings</strong> (⚙️): Quick access to AI model configuration settings</p>
-</li>
+<li><strong>New Chat</strong> (➕): Start a fresh conversation (previous sessions remain in history)</li>
+<li><strong>History</strong> (🕐): Open the chat history panel to browse, search, and resume past conversations</li>
+<li><strong>Clear Chat</strong> (🧹): Clear the current conversation view while keeping it in history</li>
+<li><strong>Settings</strong> (⚙️): Quick access to AI model configuration settings</li>
 </ul>
 <h3 id="input-controls"><strong>Input Controls</strong><a class="headerlink" href="#input-controls" title="Permanent link">#</a></h3>
 <ul>
@@ -1648,16 +1662,16 @@
 <h3 id="chat-history-lost"><strong>Chat History Lost</strong><a class="headerlink" href="#chat-history-lost" title="Permanent link">#</a></h3>
 <ul>
 <li>
-<p>Chat history is stored in browser session storage</p>
+<p>Chat history is stored server-side and tied to your user account</p>
 </li>
 <li>
-<p>Opening in incognito/private mode starts fresh</p>
+<p>History persists across browser sessions, incognito windows, and devices</p>
 </li>
 <li>
-<p>Clearing browser data will remove chat history</p>
+<p>Individual sessions can be deleted from the history panel</p>
 </li>
 <li>
-<p>Chat automatically expires after 24 hours</p>
+<p>Contact your administrator if chat history is unexpectedly missing</p>
 </li>
 </ul>
 <h2 id="tips-and-best-practices">Tips and Best Practices<a class="headerlink" href="#tips-and-best-practices" title="Permanent link">#</a></h2>
