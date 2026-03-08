@@ -45,10 +45,10 @@ The AI assistant automatically understands your current context:
 - **Vulnerability Data**: The assistant can reference current vulnerability findings
 
 ### **Chat Persistence**
-- **Session Storage**: Your chat history persists throughout your browser session
-- **Automatic Saving**: Conversations are saved automatically every 30 seconds
-- **Page Navigation**: Chat history is maintained when navigating between pages
-- **Session Timeout**: Chat data is automatically cleared after 24 hours
+- **Server-Side Storage**: Chat history is saved to the Reverge database and persists across sessions, devices, and browser restarts
+- **Per-User History**: All conversations are scoped to your account and only visible to you
+- **Session Browser**: Access previous conversations at any time using the history panel
+- **Automatic Continuation**: Returning to the assistant resumes where you left off in your most recent session
 
 ### **Streaming Responses**
 - **Real-time Generation**: See AI responses as they're being generated
@@ -56,6 +56,13 @@ The AI assistant automatically understands your current context:
 - **Connection Recovery**: Automatic handling of connection issues
 
 ## Advanced Features
+
+### **Chat History Panel**
+
+- **Browse Sessions**: Click the history button (🕐) in the header to open the history sidebar listing all previous conversations
+- **Resume a Session**: Click any session in the list to load its messages and continue the conversation
+- **Search History**: Use the search bar in the history panel to run a full-text search across all past messages
+- **Delete Sessions**: Remove individual sessions from the history panel using the delete button next to each entry
 
 ### **Panel Management**
 
@@ -118,8 +125,9 @@ Ask questions about your reconnaissance data:
 ## Chat Controls
 
 ### **Header Controls**
-- **Clear Chat** (🗑️): Remove all messages and start a fresh conversation
-
+- **New Chat** (➕): Start a fresh conversation (previous sessions remain in history)
+- **History** (🕐): Open the chat history panel to browse, search, and resume past conversations
+- **Clear Chat** (🧹): Clear the current conversation view while keeping it in history
 - **Settings** (⚙️): Quick access to AI model configuration settings
 
 ### **Input Controls**
@@ -161,13 +169,13 @@ If responses aren't generating:
 
 ### **Chat History Lost**
 
-- Chat history is stored in browser session storage
+- Chat history is stored server-side and tied to your user account
 
-- Opening in incognito/private mode starts fresh
+- History persists across browser sessions, incognito windows, and devices
 
-- Clearing browser data will remove chat history
+- Individual sessions can be deleted from the history panel
 
-- Chat automatically expires after 24 hours
+- Contact your administrator if chat history is unexpectedly missing
 
 ## Tips and Best Practices
 

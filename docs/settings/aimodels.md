@@ -1,4 +1,4 @@
-To configure AI model integration for the reverge chat functionality, select the appropriate AI provider and configure the required settings. There are four supported AI providers: **OpenAI**, **Anthropic**, **Google**, and **Ollama**.
+To configure AI model integration for the reverge chat functionality, select the appropriate AI provider and configure the required settings. There are five supported AI providers: **OpenAI**, **Anthropic**, **Google**, **Ollama**, and **Snowflake**.
 <br>
 <br>
 <center>
@@ -17,8 +17,6 @@ For the **OpenAI** provider, configure the chat model, embeddings model, and API
 - **Embeddings Model**: Specify the model for text embeddings (e.g., `text-embedding-3-small`)
 <br>
 - **API Token**: Your OpenAI API key for authentication
-<br>
-- **Max Input Tokens**: Optional limit on the number of tokens sent to the model per request. Leave blank to use the model default.
 
 
 ## Anthropic Configuration
@@ -30,8 +28,6 @@ For the **Anthropic** provider, configure the chat model and API token. Anthropi
 - **Chat Model**: Specify the Anthropic model (e.g., `claude-sonnet-4-5`, `claude-haiku-4-5`)
 <br>
 - **API Token**: Your Anthropic API key for authentication
-<br>
-- **Max Input Tokens**: Optional limit on the number of tokens sent to the model per request. Leave blank to use the model default.
 
 
 ## Google Gemini Configuration
@@ -46,8 +42,6 @@ For the **Google** provider, configure the chat model, embeddings model, and API
 <br>
 - **API Token**: Your Google AI API key for authentication
 <br>
-- **Max Input Tokens**: Optional limit on the number of tokens sent to the model per request. Leave blank to use the model default.
-<br>
 ## Ollama Configuration
 For the **Ollama** provider, configure the chat model, embeddings model, and host URL. Ollama allows you to run large language models locally or on your own infrastructure.
 <br>
@@ -59,8 +53,6 @@ For the **Ollama** provider, configure the chat model, embeddings model, and hos
 - **Embeddings Model**: Specify the model for text embeddings (e.g., `mxbai-embed-large`)
 <br>
 - **Ollama Host URL**: The URL of your Ollama server (e.g., `http://192.168.110.100:8080`)
-<br>
-- **Max Input Tokens**: Optional limit on the number of tokens sent to the model per request. Leave blank to use the model default.
 <br>
 <br>
 ### Remote Ollama Setup
@@ -74,12 +66,24 @@ ssh -i priv_key ubuntu@REVERGE_IP_ADDRESS -p22 -N -R 8181:127.0.0.1:8080
 Once the port forward connection is established, configure the **Ollama Host URL** to use the forwarded port (e.g., `http://localhost:8181`).
 
 
+## Snowflake Configuration
+For the **Snowflake** provider, configure the chat model, Personal Access Token, and account identifier. Snowflake Cortex AI provides access to enterprise-grade frontier models including Claude, hosted within your Snowflake environment.
+<br>
+<br>
+**Configuration Fields:**
+<br>
+- **Chat Model**: Specify the Snowflake Cortex model (e.g., `claude-sonnet-4-5`, `claude-opus-4-5`)
+<br>
+- **Personal Access Token (PAT)**: Your Snowflake Personal Access Token for authentication
+<br>
+- **Account Identifier**: Your Snowflake account identifier (e.g., `myorg-myaccount`). The full hostname is resolved automatically.
+
+
 ## Configuration Steps
 1. **Select AI Provider**: Choose your preferred AI provider from the dropdown menu
 2. **Configure Models**: Enter the appropriate model names for your selected provider
-3. **Set Authentication**: Provide the required API token or host URL
-4. **Set Max Input Tokens** *(optional)*: Enter a token limit to cap context size
-5. **Save Settings**: Click the <img src="../../assets/save_btn.png" alt="Save button" width="25"> button to apply the configuration
+3. **Set Authentication**: Provide the required API token, PAT, or host URL
+4. **Save Settings**: Click the <img src="../../assets/save_btn.png" alt="Save button" width="25"> button to apply the configuration
 
 
 ---
@@ -88,7 +92,7 @@ Once the port forward connection is established, configure the **Ollama Host URL
 
 Reverge uses [**Goose**](https://github.com/block/goose) as the AI agent engine that powers the chat assistant. Goose is an open-source, agentic AI framework that manages tool execution, context, and multi-step reasoning on top of the configured LLM provider. The `goosed` process runs as a local service on the Reverge server; the chat panel communicates with it over a secure internal API.
 
-Goose's provider-agnostic design is what allows Reverge to support OpenAI, Anthropic, Google, and Ollama through a single settings panel.
+Goose's provider-agnostic design is what allows Reverge to support OpenAI, Anthropic, Google, Ollama, and Snowflake through a single settings panel.
 
 ---
 
