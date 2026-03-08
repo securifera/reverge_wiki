@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#shodan" class="md-skip">
+        <a href="#interactsh" class="md-skip">
           Skip to content
         </a>
       
@@ -1068,6 +1068,48 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#interactsh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interactsh
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interactsh">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payload-urls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Payload URLs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interactions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interactions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#shodan" class="md-nav__link">
     <span class="md-ellipsis">
       Shodan
@@ -1145,6 +1187,53 @@
 <center>
 <img src="../../assets/integrations_table.png" alt="Integrations Table" width="750" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
 </center>
+<br>
+<br></p>
+<h2 id="interactsh">Interactsh<a class="headerlink" href="#interactsh" title="Permanent link">#</a></h2>
+<p>The Interactsh integration provides an interface for managing out-of-band interaction payloads and monitoring for callbacks. Configure the Interactsh server domain, authentication token, and parameters, then register payloads to receive interaction data.
+<br>
+<br></p>
+<h3 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">#</a></h3>
+<p>The <strong>Configuration</strong> panel allows you to set up your Interactsh server connection:</p>
+<ul>
+<li><strong>Server Domain</strong>: Select from available Responder collectors or enter a custom Interactsh server domain (e.g., <code>oast.pro</code>, <code>oast.live</code>)</li>
+<li><strong>Authentication Token</strong>: Optional API token for authenticated requests to your Interactsh server</li>
+<li><strong>Correlation ID Length</strong>: Minimum length of the correlation ID (default: 20, minimum: 2)</li>
+<li><strong>Nonce Length</strong>: Length of the nonce component (default: 13, minimum: 3)</li>
+</ul>
+<p>Click the <strong>Save</strong> button to persist your configuration.
+<br>
+<br>
+<center>
+<img src="../../assets/interactsh_config.png" alt="Integrations Table" width="650" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center>
+<br>
+<br></p>
+<h3 id="payload-urls">Payload URLs<a class="headerlink" href="#payload-urls" title="Permanent link">#</a></h3>
+<p>The <strong>Payload URLs</strong> panel displays all registered payloads. Click <strong>Add</strong> to register a new payload with your configured Interactsh server, or select payloads and click <strong>Delete</strong> to deregister them.
+<br>
+<br>
+<center>
+<img src="../../assets/interactsh_payloads.png" alt="Integrations Table" width="450" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center>
+<br></p>
+<h3 id="interactions">Interactions<a class="headerlink" href="#interactions" title="Permanent link">#</a></h3>
+<p>The <strong>Interactions</strong> table displays all received out-of-band interactions from your payloads, including:</p>
+<ul>
+<li><strong>Payload Domain</strong>: The full interaction domain where the callback was received</li>
+<li><strong>Protocol</strong>: The protocol used (HTTP, DNS, etc.)</li>
+<li><strong>Request Type</strong>: The type of request (GET, POST, etc.)</li>
+<li><strong>IP Address</strong>: Source IP address of the interaction</li>
+<li><strong>Created</strong>: Timestamp when the interaction was received</li>
+</ul>
+<p>Click on an interaction row to view the full <strong>Request</strong> and <strong>Response</strong> details in the panels below.
+<br>
+<br>
+<center>
+<img src="../../assets/interactions.png" alt="Integrations Table" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+</center>
+<br>
+<br>
 <br>
 <br></p>
 <h2 id="shodan">Shodan<a class="headerlink" href="#shodan" title="Permanent link">#</a></h2>
