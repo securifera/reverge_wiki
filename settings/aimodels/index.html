@@ -1062,6 +1062,90 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#backend-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backend Engine
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agents
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Agents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#managing-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing Agents
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assigning-skills-to-an-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assigning Skills to an Agent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#built-in-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Built-in Agents
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      Skills
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Skills">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#managing-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing Skills
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editing Skills
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#troubleshooting" class="md-nav__link">
     <span class="md-ellipsis">
       Troubleshooting
@@ -1205,7 +1289,9 @@
 <br>
 - <strong>Embeddings Model</strong>: Specify the model for text embeddings (e.g., <code>text-embedding-3-small</code>)
 <br>
-- <strong>OpenAI API Token</strong>: Your OpenAI API key for authentication</p>
+- <strong>API Token</strong>: Your OpenAI API key for authentication
+<br>
+- <strong>Max Input Tokens</strong>: Optional limit on the number of tokens sent to the model per request. Leave blank to use the model default.</p>
 <h2 id="anthropic-configuration">Anthropic Configuration<a class="headerlink" href="#anthropic-configuration" title="Permanent link">#</a></h2>
 <p>For the <strong>Anthropic</strong> provider, configure the chat model and API token. Anthropic's Claude models provide advanced conversational AI capabilities.
 <br>
@@ -1214,7 +1300,9 @@
 <br>
 - <strong>Chat Model</strong>: Specify the Anthropic model (e.g., <code>claude-sonnet-4-5</code>, <code>claude-haiku-4-5</code>)
 <br>
-- <strong>Anthropic API Token</strong>: Your Anthropic API key for authentication</p>
+- <strong>API Token</strong>: Your Anthropic API key for authentication
+<br>
+- <strong>Max Input Tokens</strong>: Optional limit on the number of tokens sent to the model per request. Leave blank to use the model default.</p>
 <h2 id="google-gemini-configuration">Google Gemini Configuration<a class="headerlink" href="#google-gemini-configuration" title="Permanent link">#</a></h2>
 <p>For the <strong>Google</strong> provider, configure the chat model, embeddings model, and API token. Google's Gemini models offer multimodal AI capabilities.
 <br>
@@ -1225,7 +1313,9 @@
 <br>
 - <strong>Embeddings Model</strong>: Specify the model for text embeddings (e.g., <code>gemini-embedding-001</code>)
 <br>
-- <strong>Gemini API Token</strong>: Your Google AI API key for authentication
+- <strong>API Token</strong>: Your Google AI API key for authentication
+<br>
+- <strong>Max Input Tokens</strong>: Optional limit on the number of tokens sent to the model per request. Leave blank to use the model default.
 <br></p>
 <h2 id="ollama-configuration">Ollama Configuration<a class="headerlink" href="#ollama-configuration" title="Permanent link">#</a></h2>
 <p>For the <strong>Ollama</strong> provider, configure the chat model, embeddings model, and host URL. Ollama allows you to run large language models locally or on your own infrastructure.
@@ -1238,6 +1328,8 @@
 - <strong>Embeddings Model</strong>: Specify the model for text embeddings (e.g., <code>mxbai-embed-large</code>)
 <br>
 - <strong>Ollama Host URL</strong>: The URL of your Ollama server (e.g., <code>http://192.168.110.100:8080</code>)
+<br>
+- <strong>Max Input Tokens</strong>: Optional limit on the number of tokens sent to the model per request. Leave blank to use the model default.
 <br>
 <br></p>
 <h3 id="remote-ollama-setup">Remote Ollama Setup<a class="headerlink" href="#remote-ollama-setup" title="Permanent link">#</a></h3>
@@ -1253,14 +1345,54 @@ Once the port forward connection is established, configure the <strong>Ollama Ho
 <li><strong>Select AI Provider</strong>: Choose your preferred AI provider from the dropdown menu</li>
 <li><strong>Configure Models</strong>: Enter the appropriate model names for your selected provider</li>
 <li><strong>Set Authentication</strong>: Provide the required API token or host URL</li>
+<li><strong>Set Max Input Tokens</strong> <em>(optional)</em>: Enter a token limit to cap context size</li>
 <li><strong>Save Settings</strong>: Click the <img src="../../assets/save_btn.png" alt="Save button" width="25"> button to apply the configuration</li>
 </ol>
+<hr />
+<h2 id="backend-engine">Backend Engine<a class="headerlink" href="#backend-engine" title="Permanent link">#</a></h2>
+<p>Reverge uses <a href="https://github.com/block/goose"><strong>Goose</strong></a> as the AI agent engine that powers the chat assistant. Goose is an open-source, agentic AI framework that manages tool execution, context, and multi-step reasoning on top of the configured LLM provider. The <code>goosed</code> process runs as a local service on the Reverge server; the chat panel communicates with it over a secure internal API.</p>
+<p>Goose's provider-agnostic design is what allows Reverge to support OpenAI, Anthropic, Google, and Ollama through a single settings panel.</p>
+<hr />
+<h2 id="agents">Agents<a class="headerlink" href="#agents" title="Permanent link">#</a></h2>
+<p>Agents are named AI personas with a custom system prompt. When a user selects an agent in the chat panel, that agent's prompt is injected into the session, shaping how the assistant behaves and what it focuses on.</p>
+<h3 id="managing-agents">Managing Agents<a class="headerlink" href="#managing-agents" title="Permanent link">#</a></h3>
+<ul>
+<li>Navigate to <strong>Settings → AI</strong> and scroll to the <strong>Agents</strong> panel.</li>
+<li>Click <strong>+</strong> to open the <strong>Add Agent</strong> dialog.</li>
+<li>Fill in the following fields:</li>
+<li><strong>Name</strong> — a short identifier for the agent (e.g. <code>recon-agent</code>)</li>
+<li><strong>Description</strong> — one-sentence summary of the agent's purpose</li>
+<li><strong>Prompt</strong> — the full system prompt the agent uses (e.g. <code>You are an AI assistant specialized in external attack surface reconnaissance...</code>)</li>
+<li>Click <strong>Save</strong> to create the agent.</li>
+</ul>
+<h3 id="assigning-skills-to-an-agent">Assigning Skills to an Agent<a class="headerlink" href="#assigning-skills-to-an-agent" title="Permanent link">#</a></h3>
+<p>Click any agent row to open the <strong>Skills</strong> assignment panel on the right. Move skills between the <em>Not Assigned</em> and <em>Assigned</em> lists, then click <img src="../../assets/save_btn.png" alt="Save button" width="25"> to save the assignment. Assigned skills are injected into the agent's context automatically.</p>
+<h3 id="built-in-agents">Built-in Agents<a class="headerlink" href="#built-in-agents" title="Permanent link">#</a></h3>
+<p>Built-in agents (marked with a lock icon) are provided by Reverge and cannot be deleted. They can still have skills assigned to them.</p>
+<hr />
+<h2 id="skills">Skills<a class="headerlink" href="#skills" title="Permanent link">#</a></h2>
+<p>Skills are reusable knowledge documents written in Markdown. They let you encode domain expertise, playbooks, or reference material that any agent can draw on. A skill assigned to an agent is included in that agent's context window for every session.</p>
+<h3 id="managing-skills">Managing Skills<a class="headerlink" href="#managing-skills" title="Permanent link">#</a></h3>
+<ul>
+<li>Scroll to the <strong>Skills</strong> panel in <strong>Settings → AI</strong>.</li>
+<li>Click <strong>+</strong> to open the <strong>Add Skill</strong> dialog.</li>
+<li>Fill in the following fields:</li>
+<li><strong>Name</strong> — a short identifier for the skill (e.g. <code>port-scanning-guide</code>)</li>
+<li><strong>Description</strong> — one-sentence summary shown to the AI so it knows when to apply the skill</li>
+<li><strong>Content (Markdown)</strong> — the full skill document; supports standard Markdown including headings, lists, code blocks, and tables</li>
+<li>Click <strong>Save</strong> to create the skill.</li>
+</ul>
+<h3 id="editing-skills">Editing Skills<a class="headerlink" href="#editing-skills" title="Permanent link">#</a></h3>
+<p>Click any skill row to open the inline <strong>Edit Skill</strong> panel on the right. Modify the name, description, or Markdown content and click <img src="../../assets/save_btn.png" alt="Save button" width="25"> to save.</p>
+<hr />
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">#</a></h2>
 <ul>
 <li><strong>API Authentication Errors</strong>: Verify your API tokens are correct and have sufficient permissions</li>
 <li><strong>Connection Issues</strong>: For Ollama, ensure the host URL is accessible and the service is running</li>
 <li><strong>Model Availability</strong>: Confirm the specified models are available in your account/instance</li>
 <li><strong>Rate Limiting</strong>: Some providers have rate limits; consider upgrading your plan if needed</li>
+<li><strong>Agent not appearing in chat</strong>: Ensure the agent has been saved and the page has been refreshed</li>
+<li><strong>Skill not taking effect</strong>: Confirm the skill is assigned to the active agent and the agent is selected in the chat panel</li>
 </ul>
 <p><span style="color: red;">**Note: API keys are sensitive information. Ensure they are kept secure and have appropriate access</p>
 
