@@ -15,7 +15,6 @@ nav:
   - Collectors: collectors/collectors.md
   - Resources: 
     - Components: resources/components.md
-    - Modules: resources/modules.md
     - Tools: resources/tools.md
     - Wordlists: resources/wordlists.md
   - Settings: 
@@ -25,7 +24,7 @@ nav:
     - Providers: settings/providers.md
     - Certificates: settings/certificates.md
     - Database: settings/database.md
-    - AI Models: settings/aimodels.md
+    - AI: settings/ai.md
     - Logging: settings/logging.md
   - AI Assistant:  aiassistant/aiassistant.md
   - Integrations:  integrations/integrations.md

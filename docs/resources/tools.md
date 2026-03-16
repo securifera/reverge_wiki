@@ -14,3 +14,9 @@ To update a tool's configuration, click on the tool row in the **Tools** Dialog 
 </center>
 <br>
 <br>
+
+## Modules
+
+Below the Tool Details and Wordlists panels, the **Modules** table lists all modules registered under the selected tool. Modules represent the individual scan tasks or checks a tool can perform. The table shows each module's **Name**, **Parameters**, and **Description**.
+
+New modules can be added using the **Add** button in the Modules panel header, and existing modules can be removed by selecting them and clicking the **Delete** button. Modules are invoked automatically during scanning based on the tool's configuration and scan order.
