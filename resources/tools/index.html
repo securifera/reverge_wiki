@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://reverge.io/resources/tools/">
       
       
-        <link rel="prev" href="../modules/">
+        <link rel="prev" href="../components/">
       
       
         <link rel="next" href="../wordlists/">
@@ -104,6 +104,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#modules" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -633,8 +638,6 @@
       
         
       
-        
-      
     
     
       
@@ -696,27 +699,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../modules/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Modules
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -727,6 +709,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Tools
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -736,6 +729,32 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modules
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -963,11 +982,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../settings/aimodels/" class="md-nav__link">
+      <a href="../../settings/ai/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    AI Models
+    AI
   </span>
   
 
@@ -1101,6 +1120,9 @@ To update a tool's configuration, click on the tool row in the <strong>Tools</st
 </center>
 <br>
 <br></p>
+<h2 id="modules">Modules<a class="headerlink" href="#modules" title="Permanent link">#</a></h2>
+<p>Below the Tool Details and Wordlists panels, the <strong>Modules</strong> table lists all modules registered under the selected tool. Modules represent the individual scan tasks or checks a tool can perform. The table shows each module's <strong>Name</strong>, <strong>Parameters</strong>, and <strong>Description</strong>.</p>
+<p>New modules can be added using the <strong>Add</strong> button in the Modules panel header, and existing modules can be removed by selecting them and clicking the <strong>Delete</strong> button. Modules are invoked automatically during scanning based on the tool's configuration and scan order.</p>
 
 
 
@@ -1139,7 +1161,7 @@ To update a tool's configuration, click on the tool row in the <strong>Tools</st
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../modules/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Modules">
+          <a href="../components/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Components">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1149,7 +1171,7 @@ To update a tool's configuration, click on the tool row in the <strong>Tools</st
                 Previous
               </span>
               <div class="md-ellipsis">
-                Modules
+                Components
               </div>
             </div>
           </a>
