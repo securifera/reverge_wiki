@@ -140,6 +140,36 @@ Click any skill row to open the inline **Edit Skill** panel on the right. Modify
 
 ---
 
+---
+
+## Auto Mode
+
+Auto Mode enables a fully autonomous penetration testing loop. When activated from the chat panel, a dedicated **Auto Mode Operator** agent takes over: it reviews the current Reverge data (hosts, open ports, scan results), formulates a directive, hands it to the Reverge AI agent for execution, inspects the result, and repeats — continuing until the objective is complete or a configured limit is reached.
+<br>
+<br>
+All scan jobs launched during an Auto Mode session are routed through the Reverge scheduler so they remain auditable and cancellable.
+
+### Auto Mode Configuration
+
+Navigate to **Settings → AI** and scroll to the **Auto Mode** panel to configure global limits that apply to every Auto Mode session.
+<br>
+<br>
+**Configuration Fields:**
+<br>
+- **Max Turns** — Maximum number of operator → agent turn cycles. Set to `0` for no limit. Each "turn" counts as one full operator directive plus one agent response.
+<br>
+- **Max Time (min)** — Wall-clock time limit in minutes after which Auto Mode stops automatically. Set to `0` for no limit.
+<br>
+- **Max Tokens** — Total token budget (input + output combined across both the operator and agent). Set to `0` for no limit. The running token count is displayed live in the chat panel.
+<br>
+- **Stop on Significant Findings** — When enabled, the operator is instructed to declare the objective complete as soon as a critical or high-severity vulnerability is confirmed in the Reverge database, even if not every attack vector has been explored.
+
+### Auto Mode Operator Agent
+
+The **Auto Mode Operator** is a built-in agent (marked with a lock icon in the Agents list) that drives the autonomous loop. Its system prompt can be viewed and customised via **Settings → AI → Agents**, and MCP servers or skills can be assigned to it just like any other agent. The operator has full read access to Reverge data tools so it can make informed decisions between turns.
+
+---
+
 ## Troubleshooting
 - **API Authentication Errors**: Verify your API tokens are correct and have sufficient permissions
 - **Connection Issues**: For Ollama, ensure the host URL is accessible and the service is running
@@ -147,5 +177,6 @@ Click any skill row to open the inline **Edit Skill** panel on the right. Modify
 - **Rate Limiting**: Some providers have rate limits; consider upgrading your plan if needed
 - **Agent not appearing in chat**: Ensure the agent has been saved and the page has been refreshed
 - **Skill not taking effect**: Confirm the skill is assigned to the active agent and the agent is selected in the chat panel
+- **Auto Mode not stopping**: Use the **Auto Mode** toggle in the chat panel to stop the loop manually at any time
 
 <span style="color: red;">**Note: API keys are sensitive information. Ensure they are kept secure and have appropriate access

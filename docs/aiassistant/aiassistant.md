@@ -57,6 +57,35 @@ The AI assistant automatically understands your current context:
 
 ## Advanced Features
 
+### **Auto Mode**
+
+Auto Mode turns the AI assistant into a fully autonomous penetration testing agent. When enabled, a built-in **Auto Mode Operator** agent drives the session: it analyses the current Reverge data (discovered hosts, open ports, scan results), issues a directive to the Reverge AI agent, evaluates the response, and repeats — forming a continuous operator → agent loop that runs without user intervention.
+<br>
+<br>
+All scan jobs scheduled during an Auto Mode session are routed through the Reverge scheduler and remain visible in the normal scan history.
+<br>
+
+**Enabling Auto Mode**
+
+1. Open the AI assistant chat panel.
+2. Toggle the **Auto Mode** switch located below the chat input area.
+3. Type your high-level objective (e.g. *"Enumerate all services on target example.com and report any critical findings"*) and press **Enter** to send.
+4. The operator takes over from the first AI response and continues issuing directives autonomously.
+
+**While Auto Mode is Running**
+
+- The **operator bubble** (labelled *Operator*) shows the directive issued for each turn, together with any thinking steps and tool calls the operator made to arrive at it.
+- The **agent bubble** (labelled *REVERGE AI*) shows the agent's response to each directive, including intermediate tool-call and thinking step indicators.
+- The **token counter** (top-right of the input area) tracks cumulative token usage across both the operator and agent for the entire session.
+- A turn indicator below the toggle (e.g. *Turn 3/10*) shows current progress against any configured limits.
+
+**Stopping Auto Mode**
+
+Toggle the **Auto Mode** switch off at any time to stop the loop gracefully after the current agent response completes. The session history is preserved and the chat remains available for normal use.
+<br>
+<br>
+Auto Mode also stops automatically when any configured limit is reached (max turns, max time, max tokens, or when a significant finding is discovered if **Stop on Significant Findings** is enabled in **Settings → AI → Auto Mode**).
+
 ### **Chat History Panel**
 
 - **Browse Sessions**: Click the history button (🕐) in the header to open the history sidebar listing all previous conversations
@@ -136,6 +165,8 @@ Ask questions about your reconnaissance data:
 - **Provider Selection**: Choose between configured AI providers
 
 - **Auto-resize Input**: Text area expands as you type longer messages
+
+- **Auto Mode Toggle**: Enable or disable the autonomous operator → agent loop for the current session. The toggle is located below the input field alongside the session token counter.
 
 ## Troubleshooting
 
