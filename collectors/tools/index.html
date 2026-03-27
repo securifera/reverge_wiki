@@ -1,0 +1,2488 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A Red Team Focused Attack Surface Management Framework">
+      
+      
+        <meta name="author" content="Securifera">
+      
+      
+        <link rel="canonical" href="https://reverge.io/collectors/tools/">
+      
+      
+        <link rel="prev" href="../data_model/">
+      
+      
+        <link rel="next" href="../../resources/components/">
+      
+      
+      <link rel="icon" href="../../assets/reverge_icon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.40">
+    
+    
+      
+        <title>Tools - reverge wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Tools - reverge wiki" >
+      
+        <meta  property="og:description"  content="A Red Team Focused Attack Surface Management Framework" >
+      
+        <meta  property="og:image"  content="https://reverge.io/assets/images/social/collectors/tools.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://reverge.io/collectors/tools/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Tools - reverge wiki" >
+      
+        <meta  name="twitter:description"  content="A Red Team Focused Attack Surface Management Framework" >
+      
+        <meta  name="twitter:image"  content="https://reverge.io/assets/images/social/collectors/tools.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#collector-tools" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://www.securifera.com" title="reverge wiki" class="md-header__button md-logo" aria-label="reverge wiki" data-md-component="logo">
+      
+  <img src="../../assets/reverge_logo_2.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            reverge wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tools
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/securifera/reverge_wiki" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../setup/database/" class="md-tabs__link">
+          
+  
+    
+  
+  Setup
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../scans/scans/" class="md-tabs__link">
+        
+  
+    
+  
+  Scans
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../targets/targets/" class="md-tabs__link">
+        
+  
+    
+  
+  Targets
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../collectors/" class="md-tabs__link">
+          
+  
+    
+  
+  Collectors
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../resources/components/" class="md-tabs__link">
+          
+  
+    
+  
+  Resources
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../settings/users/" class="md-tabs__link">
+          
+  
+    
+  
+  Settings
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../aiassistant/aiassistant/" class="md-tabs__link">
+        
+  
+    
+  
+  AI Assistant
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../integrations/integrations/" class="md-tabs__link">
+        
+  
+    
+  
+  Integrations
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../help/help/" class="md-tabs__link">
+        
+  
+    
+  
+  Help
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://www.securifera.com" title="reverge wiki" class="md-nav__button md-logo" aria-label="reverge wiki" data-md-component="logo">
+      
+  <img src="../../assets/reverge_logo_2.png" alt="logo">
+
+    </a>
+    reverge wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/securifera/reverge_wiki" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Setup
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Setup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/database/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Database
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/authentication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Authentication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scans/scans/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scans
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../targets/targets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Targets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Collectors
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Collectors
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../collectors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data_model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Tools
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Tools
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#execution-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      Execution Order
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passive-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passive Tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Passive Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#subfinder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Subfinder
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gau" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gau
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shodan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shodan
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-thc" class="md-nav__link">
+    <span class="md-ellipsis">
+      IP THC
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#active-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Active Tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Active Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#masscan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Masscan
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#httpx" class="md-nav__link">
+    <span class="md-ellipsis">
+      Httpx
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nmap
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#netexec" class="md-nav__link">
+    <span class="md-ellipsis">
+      Netexec
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metasploit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metasploit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nuclei" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nuclei
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pyshot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pyshot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webcap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Webcap
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iis-shortname-scanner" class="md-nav__link">
+    <span class="md-ellipsis">
+      IIS Shortname Scanner
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feroxbuster" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feroxbuster
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crapsecrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crapsecrets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sqlmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sqlmap
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tool-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tool Configuration
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Resources
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/components/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Components
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/wordlists/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wordlists
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Settings
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Settings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../settings/users/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Users
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../settings/groups/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Groups
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../settings/collectors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Collectors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../settings/providers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Providers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../settings/certificates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Certificates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../settings/database/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Database
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../settings/ai/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../settings/logging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aiassistant/aiassistant/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Assistant
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/integrations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Integrations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../help/help/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Help
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="collector-tools">Collector Tools<a class="headerlink" href="#collector-tools" title="Permanent link">#</a></h1>
+<p>The reverge collector ships with a set of integrated scanning tools called <strong>Waluigi tools</strong>. Each tool defines:</p>
+<ul>
+<li><strong>Collector type</strong> — <code>ACTIVE</code> (direct network probing) or <code>PASSIVE</code> (API/third-party lookups)</li>
+<li><strong>Input records</strong> — the data model types the tool consumes as targets</li>
+<li><strong>Output records</strong> — the data model types the tool produces</li>
+<li><strong>Scan order</strong> — relative execution priority (lower numbers run first)</li>
+</ul>
+<p>Tools can be enabled or disabled per scan schedule. Wordlists can be attached to tools that support directory brute-forcing.</p>
+<hr />
+<h2 id="execution-order">Execution Order<a class="headerlink" href="#execution-order" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Order</th>
+<th>Tool</th>
+<th>Type</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><a href="#subfinder">Subfinder</a></td>
+<td>PASSIVE</td>
+<td>Subdomain enumeration via passive sources</td>
+</tr>
+<tr>
+<td>1</td>
+<td><a href="#gau">Gau</a></td>
+<td>PASSIVE</td>
+<td>Historical URL collection from public archives</td>
+</tr>
+<tr>
+<td>2</td>
+<td><a href="#masscan">Masscan</a></td>
+<td>ACTIVE</td>
+<td>High-speed port scanning</td>
+</tr>
+<tr>
+<td>3</td>
+<td><a href="#shodan">Shodan</a></td>
+<td>PASSIVE</td>
+<td>Shodan API host and service lookup</td>
+</tr>
+<tr>
+<td>4</td>
+<td><a href="#httpx">Httpx</a></td>
+<td>ACTIVE</td>
+<td>HTTP service detection and fingerprinting</td>
+</tr>
+<tr>
+<td>5</td>
+<td><a href="#ip-thc">IP THC</a></td>
+<td>PASSIVE</td>
+<td>Passive DNS resolution via IP THC API</td>
+</tr>
+<tr>
+<td>6</td>
+<td><a href="#nmap">Nmap</a></td>
+<td>ACTIVE</td>
+<td>Service version detection and NSE scripting</td>
+</tr>
+<tr>
+<td>6</td>
+<td><a href="#netexec">Netexec</a></td>
+<td>ACTIVE</td>
+<td>Protocol-level authenticated enumeration</td>
+</tr>
+<tr>
+<td>6</td>
+<td><a href="#metasploit">Metasploit</a></td>
+<td>ACTIVE</td>
+<td>MSF auxiliary/exploit module execution</td>
+</tr>
+<tr>
+<td>7</td>
+<td><a href="#nuclei">Nuclei</a></td>
+<td>ACTIVE</td>
+<td>YAML-template-based vulnerability scanning</td>
+</tr>
+<tr>
+<td>7</td>
+<td><a href="#python">Python</a></td>
+<td>ACTIVE</td>
+<td>Custom Python script execution</td>
+</tr>
+<tr>
+<td>8</td>
+<td><a href="#pyshot">Pyshot</a></td>
+<td>ACTIVE</td>
+<td>Web screenshot capture (PhantomJS)</td>
+</tr>
+<tr>
+<td>8</td>
+<td><a href="#webcap">Webcap</a></td>
+<td>ACTIVE</td>
+<td>Web screenshot capture (Chrome/Chromium)</td>
+</tr>
+<tr>
+<td>8</td>
+<td><a href="#iis-shortname-scanner">IIS Shortname Scanner</a></td>
+<td>ACTIVE</td>
+<td>IIS 8.3 filename disclosure detection</td>
+</tr>
+<tr>
+<td>10</td>
+<td><a href="#feroxbuster">Feroxbuster</a></td>
+<td>ACTIVE</td>
+<td>Web directory brute-forcing</td>
+</tr>
+<tr>
+<td>10</td>
+<td><a href="#crapsecrets">Crapsecrets</a></td>
+<td>ACTIVE</td>
+<td>Cryptographic secret weakness detection</td>
+</tr>
+<tr>
+<td>12</td>
+<td><a href="#sqlmap">Sqlmap</a></td>
+<td>ACTIVE</td>
+<td>SQL injection vulnerability detection</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="passive-tools">Passive Tools<a class="headerlink" href="#passive-tools" title="Permanent link">#</a></h2>
+<h3 id="subfinder">Subfinder<a class="headerlink" href="#subfinder" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td>PASSIVE</td>
+</tr>
+<tr>
+<td><strong>Scan Order</strong></td>
+<td>1</td>
+</tr>
+<tr>
+<td><strong>Project</strong></td>
+<td><a href="https://github.com/projectdiscovery/subfinder">github.com/projectdiscovery/subfinder</a></td>
+</tr>
+<tr>
+<td><strong>Tags</strong></td>
+<td><code>passive</code>, <code>dns-enum</code></td>
+</tr>
+<tr>
+<td><strong>Default Args</strong></td>
+<td><code>-all</code></td>
+</tr>
+<tr>
+<td><strong>Input Records</strong></td>
+<td><code>Domain</code></td>
+</tr>
+<tr>
+<td><strong>Output Records</strong></td>
+<td><code>Host</code>, <code>Domain</code></td>
+</tr>
+</tbody>
+</table>
+<p>Performs subdomain discovery by querying passive data sources including certificate transparency logs, public search engines, and security vendor APIs (Shodan, SecurityTrails, Chaos, etc.) without directly probing target networks.</p>
+<p>Discovered subdomains are DNS-resolved to IP addresses, producing <code>Host</code> and <code>Domain</code> records. The <code>-all</code> flag enables all configured data sources. API keys for third-party sources are managed in a config file on the collector.</p>
+<hr />
+<h3 id="gau">Gau<a class="headerlink" href="#gau" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td>PASSIVE</td>
+</tr>
+<tr>
+<td><strong>Scan Order</strong></td>
+<td>1</td>
+</tr>
+<tr>
+<td><strong>Project</strong></td>
+<td><a href="https://github.com/lc/gau">github.com/lc/gau</a></td>
+</tr>
+<tr>
+<td><strong>Tags</strong></td>
+<td><code>passive</code>, <code>http-crawl</code></td>
+</tr>
+<tr>
+<td><strong>Default Args</strong></td>
+<td><code>--retries 3 --timeout 5</code></td>
+</tr>
+<tr>
+<td><strong>Input Records</strong></td>
+<td><code>Domain</code>, <code>Port</code>, <code>HttpEndpoint</code></td>
+</tr>
+<tr>
+<td><strong>Output Records</strong></td>
+<td><code>Port</code>, <code>Host</code>, <code>Domain</code>, <code>ListItem</code>, <code>HttpEndpoint</code>, <code>HttpEndpointData</code></td>
+</tr>
+</tbody>
+</table>
+<p>Fetches publicly known URLs for target domains from AlienVault OTX, the Wayback Machine, Common Crawl, and URLScan. No active probing of targets occurs — all data is retrieved from external archives and threat intelligence platforms.</p>
+<p>Historical URLs are used to enrich the scan scope with previously observed HTTP endpoints, paths, and domain variants.</p>
+<hr />
+<h3 id="shodan">Shodan<a class="headerlink" href="#shodan" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td>PASSIVE</td>
+</tr>
+<tr>
+<td><strong>Scan Order</strong></td>
+<td>3</td>
+</tr>
+<tr>
+<td><strong>Project</strong></td>
+<td><a href="https://www.shodan.io/">shodan.io</a></td>
+</tr>
+<tr>
+<td><strong>Tags</strong></td>
+<td><code>passive</code>, <code>port-scan</code>, <code>service-detection</code></td>
+</tr>
+<tr>
+<td><strong>Default Args</strong></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>Input Records</strong></td>
+<td><code>Host</code>, <code>Subnet</code></td>
+</tr>
+<tr>
+<td><strong>Output Records</strong></td>
+<td><code>HttpEndpointData</code>, <code>HttpEndpoint</code>, <code>ListItem</code>, <code>Domain</code>, <code>Certificate</code>, <code>WebComponent</code>, <code>Port</code>, <code>Host</code></td>
+</tr>
+</tbody>
+</table>
+<p>Queries the Shodan API for known information about target hosts and subnets without directly scanning them. Extracts open ports, service banners, SSL certificates, technology fingerprints, and associated domain names from Shodan's existing database.</p>
+<p>Requires a Shodan API key configured on the collector. This is one of the richest passive data producers, returning a comprehensive set of output record types.</p>
+<hr />
+<h3 id="ip-thc">IP THC<a class="headerlink" href="#ip-thc" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td>PASSIVE</td>
+</tr>
+<tr>
+<td><strong>Scan Order</strong></td>
+<td>5</td>
+</tr>
+<tr>
+<td><strong>Project</strong></td>
+<td><a href="https://ip.thc.org/">ip.thc.org</a></td>
+</tr>
+<tr>
+<td><strong>Tags</strong></td>
+<td><code>passive</code>, <code>dns-enum</code></td>
+</tr>
+<tr>
+<td><strong>Default Args</strong></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>Input Records</strong></td>
+<td><code>Host</code>, <code>Subnet</code>, <code>Domain</code></td>
+</tr>
+<tr>
+<td><strong>Output Records</strong></td>
+<td><code>Domain</code></td>
+</tr>
+</tbody>
+</table>
+<p>Queries the IP THC threat intelligence platform for passive DNS data associated with target IP addresses and subnets. Expands domain coverage by discovering domain names historically associated with target IPs using DNS history records.</p>
+<p>Requires an IP THC API key. No active network probing is performed.</p>
+<hr />
+<h2 id="active-tools">Active Tools<a class="headerlink" href="#active-tools" title="Permanent link">#</a></h2>
+<h3 id="masscan">Masscan<a class="headerlink" href="#masscan" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td>ACTIVE</td>
+</tr>
+<tr>
+<td><strong>Scan Order</strong></td>
+<td>2</td>
+</tr>
+<tr>
+<td><strong>Project</strong></td>
+<td><a href="https://github.com/robertdavidgraham/masscan">github.com/robertdavidgraham/masscan</a></td>
+</tr>
+<tr>
+<td><strong>Tags</strong></td>
+<td><code>port-scan</code>, <code>fast</code></td>
+</tr>
+<tr>
+<td><strong>Default Args</strong></td>
+<td><code>--rate 1000</code></td>
+</tr>
+<tr>
+<td><strong>Input Records</strong></td>
+<td><code>Subnet</code>, <code>Host</code></td>
+</tr>
+<tr>
+<td><strong>Output Records</strong></td>
+<td><code>Host</code>, <code>Port</code></td>
+</tr>
+</tbody>
+</table>
+<p>High-speed asynchronous port scanner capable of scanning large IP ranges rapidly. Uses its own TCP/IP stack to achieve packet rates of millions per second. Configured at 1,000 packets/second by default for rate-controlled scanning.</p>
+<p>Masscan is typically the first active tool to run, rapidly identifying open ports across the target scope before more detailed tools (Nmap, Httpx) perform service identification. XML output is parsed to extract <code>Host</code> and <code>Port</code> records.</p>
+<p>The port scope is driven by the scan's port bitmap — a bitmask encoding the set of ports to scan, transmitted from the reverge server with each scheduled scan.</p>
+<hr />
+<h3 id="httpx">Httpx<a class="headerlink" href="#httpx" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td>ACTIVE</td>
+</tr>
+<tr>
+<td><strong>Scan Order</strong></td>
+<td>4</td>
+</tr>
+<tr>
+<td><strong>Project</strong></td>
+<td><a href="https://github.com/projectdiscovery/httpx">github.com/projectdiscovery/httpx</a></td>
+</tr>
+<tr>
+<td><strong>Tags</strong></td>
+<td><code>http-crawl</code>, <code>service-detection</code>, <code>fast</code></td>
+</tr>
+<tr>
+<td><strong>Default Args</strong></td>
+<td><code>-favicon -td -t 50 -timeout 3 -maxhr 5 -rstr 10000 -tls-grab</code></td>
+</tr>
+<tr>
+<td><strong>Input Records</strong></td>
+<td><code>Host</code>, <code>Port</code>, <code>Domain</code>, <code>HttpEndpointData</code></td>
+</tr>
+<tr>
+<td><strong>Output Records</strong></td>
+<td><code>HttpEndpointData</code>, <code>HttpEndpoint</code>, <code>CollectionModule</code>, <code>CollectionModuleOutput</code>, <code>WebComponent</code>, <code>Domain</code>, <code>Certificate</code>, <code>Screenshot</code>, <code>ListItem</code>, <code>Port</code>, <code>Host</code></td>
+</tr>
+</tbody>
+</table>
+<p>Multi-purpose HTTP toolkit that probes all HTTP/HTTPS services in the scan scope with 50 parallel threads. This is one of the most comprehensive data-producing tools in the pipeline.</p>
+<p>Key capabilities:</p>
+<ul>
+<li>Technology detection via Wappalyzer signatures (<code>-td</code>)</li>
+<li>TLS certificate extraction and SAN domain discovery (<code>-tls-grab</code>)</li>
+<li>Favicon hash capture for service fingerprinting (<code>-favicon</code>)</li>
+<li>Response metadata (title, status, content-length)</li>
+<li>Screenshot capture</li>
+<li>Timeout and response size limits to prevent stalling on large responses</li>
+</ul>
+<p>Configured with a 3-second timeout, maximum 5-hop redirect follow (<code>-maxhr 5</code>), and response body truncated to 10 KB (<code>-rstr 10000</code>).</p>
+<hr />
+<h3 id="nmap">Nmap<a class="headerlink" href="#nmap" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td>ACTIVE</td>
+</tr>
+<tr>
+<td><strong>Scan Order</strong></td>
+<td>6</td>
+</tr>
+<tr>
+<td><strong>Project</strong></td>
+<td><a href="https://github.com/nmap/nmap">github.com/nmap/nmap</a></td>
+</tr>
+<tr>
+<td><strong>Tags</strong></td>
+<td><code>port-scan</code>, <code>service-detection</code>, <code>os-detection</code>, <code>slow</code></td>
+</tr>
+<tr>
+<td><strong>Default Args</strong></td>
+<td><code>-sT -sV --script +ssl-cert --script-args ssl=True</code></td>
+</tr>
+<tr>
+<td><strong>Input Records</strong></td>
+<td><code>Subnet</code>, <code>Host</code>, <code>Port</code></td>
+</tr>
+<tr>
+<td><strong>Output Records</strong></td>
+<td><code>CollectionModule</code>, <code>CollectionModuleOutput</code>, <code>WebComponent</code>, <code>Domain</code>, <code>Certificate</code>, <code>ListItem</code>, <code>Port</code>, <code>Host</code></td>
+</tr>
+</tbody>
+</table>
+<p>Industry-standard network scanner. Performs TCP connect scans (<code>-sT</code>) with service version detection (<code>-sV</code>) and SSL certificate retrieval via NSE scripts. Targets discovered by earlier tools (e.g., Masscan open ports) to perform deeper service identification.</p>
+<p>Nmap supports NSE (Nmap Scripting Engine) modules. When modules are configured on a scan, Nmap enumrates available NSE scripts and runs them against matching services. Module output is stored as <code>CollectionModule</code> and <code>CollectionModuleOutput</code> records. SSL certificate data is extracted to produce <code>Certificate</code> and <code>Domain</code> records.</p>
+<p>Tagged as <code>slow</code> due to the -sV service detection probes.</p>
+<hr />
+<h3 id="netexec">Netexec<a class="headerlink" href="#netexec" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td>ACTIVE</td>
+</tr>
+<tr>
+<td><strong>Scan Order</strong></td>
+<td>6</td>
+</tr>
+<tr>
+<td><strong>Project</strong></td>
+<td><a href="https://github.com/Pennyw0rth/NetExec">github.com/Pennyw0rth/NetExec</a></td>
+</tr>
+<tr>
+<td><strong>Tags</strong></td>
+<td><code>service-detection</code>, <code>authenticated</code>, <code>vuln-scan</code>, <code>exploitation</code>, <code>os-detection</code></td>
+</tr>
+<tr>
+<td><strong>Default Args</strong></td>
+<td><em>(module-driven)</em></td>
+</tr>
+<tr>
+<td><strong>Input Records</strong></td>
+<td><code>Subnet</code>, <code>Host</code>, <code>Port</code></td>
+</tr>
+<tr>
+<td><strong>Output Records</strong></td>
+<td><code>CollectionModule</code>, <code>CollectionModuleOutput</code>, <code>WebComponent</code>, <code>Domain</code>, <code>Certificate</code>, <code>ListItem</code>, <code>Port</code>, <code>Host</code></td>
+</tr>
+</tbody>
+</table>
+<p>Post-exploitation and enumeration framework supporting multiple network protocols. Netexec is used for protocol-level authenticated enumeration and vulnerability detection.</p>
+<p>Supported protocols and their standard ports:</p>
+<table>
+<thead>
+<tr>
+<th>Protocol</th>
+<th>Default Port</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FTP</td>
+<td>21</td>
+</tr>
+<tr>
+<td>SSH</td>
+<td>22</td>
+</tr>
+<tr>
+<td>NFS</td>
+<td>111</td>
+</tr>
+<tr>
+<td>WMI</td>
+<td>135</td>
+</tr>
+<tr>
+<td>LDAP</td>
+<td>389</td>
+</tr>
+<tr>
+<td>SMB</td>
+<td>445</td>
+</tr>
+<tr>
+<td>MySQL</td>
+<td>3306</td>
+</tr>
+<tr>
+<td>RDP</td>
+<td>3389</td>
+</tr>
+<tr>
+<td>VNC</td>
+<td>5900</td>
+</tr>
+<tr>
+<td>WinRM</td>
+<td>5985</td>
+</tr>
+</tbody>
+</table>
+<p>Modules are dynamically enumerated from the installed binary and cached by version fingerprint. When credentials are available (via <code>Credential</code> records), Netexec performs authenticated enumeration. Module output is stored as <code>CollectionModule</code> / <code>CollectionModuleOutput</code> records, with hostnames, domains, and component data also extracted.</p>
+<hr />
+<h3 id="metasploit">Metasploit<a class="headerlink" href="#metasploit" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td>ACTIVE</td>
+</tr>
+<tr>
+<td><strong>Scan Order</strong></td>
+<td>6</td>
+</tr>
+<tr>
+<td><strong>Project</strong></td>
+<td><a href="https://github.com/rapid7/metasploit-framework">github.com/rapid7/metasploit-framework</a></td>
+</tr>
+<tr>
+<td><strong>Tags</strong></td>
+<td><code>vuln-scan</code>, <code>authenticated</code>, <code>service-detection</code>, <code>exploitation</code></td>
+</tr>
+<tr>
+<td><strong>Default Args</strong></td>
+<td><em>(module path specified per scan, e.g., <code>auxiliary/scanner/smb/smb_ms17_010</code>)</em></td>
+</tr>
+<tr>
+<td><strong>Input Records</strong></td>
+<td><code>Subnet</code>, <code>Host</code>, <code>Port</code></td>
+</tr>
+<tr>
+<td><strong>Output Records</strong></td>
+<td><code>CollectionModule</code>, <code>CollectionModuleOutput</code>, <code>Domain</code>, <code>Port</code>, <code>Host</code></td>
+</tr>
+</tbody>
+</table>
+<p>Connects to a running <code>msfrpcd</code> JSON-RPC daemon (default <code>127.0.0.1:8081</code>) to execute Metasploit auxiliary scanner and exploit modules against target hosts and ports.</p>
+<p>Execution flow:</p>
+<ol>
+<li>A dedicated MSF console is created via the RPC API.</li>
+<li><code>RHOSTS</code> is set from the target IP list; <code>RPORT</code> is set from the discovered port.</li>
+<li>The specified module is loaded and executed (<code>run</code> for auxiliary modules, <code>check</code> for exploit modules).</li>
+<li>Console output is polled until the module completes.</li>
+<li>Results are stored as <code>CollectionModuleOutput</code> records.</li>
+</ol>
+<p>Available modules are enumerated from the RPC server and cached by Metasploit version fingerprint. The module path is specified in the tool's <code>args</code> field at scan schedule time.</p>
+<hr />
+<h3 id="nuclei">Nuclei<a class="headerlink" href="#nuclei" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td>ACTIVE</td>
+</tr>
+<tr>
+<td><strong>Scan Order</strong></td>
+<td>7</td>
+</tr>
+<tr>
+<td><strong>Project</strong></td>
+<td><a href="https://github.com/projectdiscovery/nuclei">github.com/projectdiscovery/nuclei</a></td>
+</tr>
+<tr>
+<td><strong>Tags</strong></td>
+<td><code>vuln-scan</code>, <code>slow</code></td>
+</tr>
+<tr>
+<td><strong>Default Args</strong></td>
+<td><code>-ni -pt http -rl 50 -t http/technologies/fingerprinthub-web-fingerprints.yaml</code></td>
+</tr>
+<tr>
+<td><strong>Input Records</strong></td>
+<td><code>Port</code>, <code>HttpEndpointData</code></td>
+</tr>
+<tr>
+<td><strong>Output Records</strong></td>
+<td><code>CollectionModule</code>, <code>CollectionModuleOutput</code>, <code>WebComponent</code>, <code>Vulnerability</code></td>
+</tr>
+</tbody>
+</table>
+<p>YAML-template-based vulnerability scanner. Scans base URLs (root paths only — sub-paths are filtered to avoid redundant template runs) at rate limit 50 requests/second with HTTP-only probing (<code>-pt http</code>).</p>
+<p>The default configuration runs the FingerprintHub technology fingerprinting templates. Custom templates can be specified in the tool <code>args</code> field. Nuclei modules (template paths) are enumerable via <code>-tl</code>/<code>-td</code> flags and can be selected per scan.</p>
+<p>Vulnerability findings are stored as <code>Vuln</code> records; detected technologies become <code>WebComponent</code> records.</p>
+<hr />
+<h3 id="python">Python<a class="headerlink" href="#python" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td>ACTIVE</td>
+</tr>
+<tr>
+<td><strong>Scan Order</strong></td>
+<td>7</td>
+</tr>
+<tr>
+<td><strong>Project</strong></td>
+<td><a href="https://www.python.org/">python.org</a></td>
+</tr>
+<tr>
+<td><strong>Tags</strong></td>
+<td><code>code-exec</code></td>
+</tr>
+<tr>
+<td><strong>Default Args</strong></td>
+<td><em>(user-supplied script path and arguments)</em></td>
+</tr>
+<tr>
+<td><strong>Input Records</strong></td>
+<td><code>Port</code></td>
+</tr>
+<tr>
+<td><strong>Output Records</strong></td>
+<td><code>CollectionModule</code>, <code>CollectionModuleOutput</code></td>
+</tr>
+</tbody>
+</table>
+<p>A generic execution harness for running custom Python scripts against discovered network ports. The script path and runtime arguments are specified via the tool's <code>args</code> field at scan schedule time.</p>
+<p>This tool enables ad-hoc automation tasks, custom protocol checks, or any custom scanning logic where a purpose-built tool module does not yet exist. Output is captured and stored as <code>CollectionModuleOutput</code> records.</p>
+<hr />
+<h3 id="pyshot">Pyshot<a class="headerlink" href="#pyshot" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td>ACTIVE</td>
+</tr>
+<tr>
+<td><strong>Scan Order</strong></td>
+<td>8</td>
+</tr>
+<tr>
+<td><strong>Project</strong></td>
+<td><a href="https://github.com/securifera/pyshot">github.com/securifera/pyshot</a></td>
+</tr>
+<tr>
+<td><strong>Tags</strong></td>
+<td><code>screenshot</code>, <code>load-balancer-incompatible</code></td>
+</tr>
+<tr>
+<td><strong>Default Args</strong></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>Input Records</strong></td>
+<td><code>Port</code>, <code>HttpEndpointData</code></td>
+</tr>
+<tr>
+<td><strong>Output Records</strong></td>
+<td><code>Screenshot</code>, <code>Domain</code>, <code>ListItem</code>, <code>HttpEndpoint</code>, <code>HttpEndpointData</code></td>
+</tr>
+</tbody>
+</table>
+<p>PhantomJS-based web screenshot tool. Captures screenshots of web services concurrently and stores the results as base64-encoded <code>Screenshot</code> records. Screenshots are deduplicated by image hash.</p>
+<p><strong>Note:</strong> Tagged as <code>load-balancer-incompatible</code> — sticky sessions may be required for accurate captures on load-balanced targets. For modern environments, <a href="#webcap">Webcap</a> is preferred.</p>
+<hr />
+<h3 id="webcap">Webcap<a class="headerlink" href="#webcap" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td>ACTIVE</td>
+</tr>
+<tr>
+<td><strong>Scan Order</strong></td>
+<td>8</td>
+</tr>
+<tr>
+<td><strong>Project</strong></td>
+<td><a href="https://github.com/blacklanternsecurity/webcap">github.com/blacklanternsecurity/webcap</a></td>
+</tr>
+<tr>
+<td><strong>Tags</strong></td>
+<td><code>screenshot</code>, <code>load-balancer-compatible</code></td>
+</tr>
+<tr>
+<td><strong>Default Args</strong></td>
+<td><code>--timeout 5 --threads 5 --quality 20 --format jpeg</code></td>
+</tr>
+<tr>
+<td><strong>Input Records</strong></td>
+<td><code>Port</code>, <code>HttpEndpointData</code></td>
+</tr>
+<tr>
+<td><strong>Output Records</strong></td>
+<td><code>Screenshot</code>, <code>Domain</code>, <code>ListItem</code>, <code>HttpEndpoint</code>, <code>HttpEndpointData</code></td>
+</tr>
+</tbody>
+</table>
+<p>Chrome/Chromium-based modern replacement for Pyshot. Captures JPEG screenshots at 20% quality using async/asyncio processing with 5 concurrent threads and a 5-second per-page timeout. Tagged as <code>load-balancer-compatible</code>.</p>
+<p>Screenshots are base64-encoded and deduplicated by image hash before being stored as <code>Screenshot</code> records.</p>
+<hr />
+<h3 id="iis-shortname-scanner">IIS Shortname Scanner<a class="headerlink" href="#iis-shortname-scanner" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td>ACTIVE</td>
+</tr>
+<tr>
+<td><strong>Scan Order</strong></td>
+<td>8</td>
+</tr>
+<tr>
+<td><strong>Project</strong></td>
+<td><a href="https://github.com/lijiejie/IIS_shortname_Scanner">github.com/lijiejie/IIS_shortname_Scanner</a></td>
+</tr>
+<tr>
+<td><strong>Tags</strong></td>
+<td><code>vuln-scan</code>, <code>http-crawl</code></td>
+</tr>
+<tr>
+<td><strong>Default Args</strong></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>Input Records</strong></td>
+<td><code>Port</code>, <code>HttpEndpointData</code></td>
+</tr>
+<tr>
+<td><strong>Output Records</strong></td>
+<td><code>CollectionModule</code>, <code>CollectionModuleOutput</code></td>
+</tr>
+</tbody>
+</table>
+<p>Probes IIS web servers for the 8.3 filename disclosure vulnerability, which allows unauthenticated attackers to enumerate short (8.3 format) filenames and directory names via HTTP requests.</p>
+<p>The scanner first performs a vulnerability check (<code>is_vulnerable()</code>) before running the full enumeration. Results include lists of discovered short filenames (<code>files</code>) and directory names (<code>dirs</code>), stored as <code>CollectionModuleOutput</code> records.</p>
+<hr />
+<h3 id="feroxbuster">Feroxbuster<a class="headerlink" href="#feroxbuster" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td>ACTIVE</td>
+</tr>
+<tr>
+<td><strong>Scan Order</strong></td>
+<td>10</td>
+</tr>
+<tr>
+<td><strong>Project</strong></td>
+<td><a href="https://github.com/epi052/feroxbuster">github.com/epi052/feroxbuster</a></td>
+</tr>
+<tr>
+<td><strong>Tags</strong></td>
+<td><code>http-crawl</code></td>
+</tr>
+<tr>
+<td><strong>Default Args</strong></td>
+<td><code>--rate-limit 50 -s 200 -n --auto-bail</code></td>
+</tr>
+<tr>
+<td><strong>Input Records</strong></td>
+<td><code>Port</code>, <code>HttpEndpointData</code></td>
+</tr>
+<tr>
+<td><strong>Output Records</strong></td>
+<td><code>Domain</code>, <code>ListItem</code>, <code>HttpEndpoint</code>, <code>HttpEndpointData</code></td>
+</tr>
+</tbody>
+</table>
+<p>Rust-based web directory scanner. Performs dictionary-based path brute-forcing against HTTP/HTTPS services. Rate-limited to 50 requests/second, filtering for HTTP 200 responses only (<code>-s 200</code>), with no recursion (<code>-n</code>) and automatic error bail-out (<code>--auto-bail</code>).</p>
+<p>URLs across all targets are deduplicated to avoid rescanning previously discovered paths. Discovered paths are stored as <code>ListItem</code> and <code>HttpEndpoint</code> records.</p>
+<p>A wordlist must be configured for this tool to be effective. Wordlists are managed in the reverge <a href="/resources/wordlists/">Wordlists</a> settings.</p>
+<hr />
+<h3 id="crapsecrets">Crapsecrets<a class="headerlink" href="#crapsecrets" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td>ACTIVE</td>
+</tr>
+<tr>
+<td><strong>Scan Order</strong></td>
+<td>10</td>
+</tr>
+<tr>
+<td><strong>Project</strong></td>
+<td><a href="https://github.com/irsdl/crapsecrets">github.com/irsdl/crapsecrets</a></td>
+</tr>
+<tr>
+<td><strong>Tags</strong></td>
+<td><code>vuln-scan</code></td>
+</tr>
+<tr>
+<td><strong>Default Args</strong></td>
+<td><code>-nh -t 3 -mrd 5 -avsk -fvsp</code></td>
+</tr>
+<tr>
+<td><strong>Input Records</strong></td>
+<td><code>Port</code>, <code>HttpEndpointData</code></td>
+</tr>
+<tr>
+<td><strong>Output Records</strong></td>
+<td><code>Vulnerability</code></td>
+</tr>
+</tbody>
+</table>
+<p>Detects the use of known-weak or default cryptographic secrets in web applications — including JWT signing keys, framework session keys, and API tokens. Scans base URLs only (root paths), filtering out sub-paths to focus on the primary application entry points.</p>
+<p>Default flag meanings:</p>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-nh</code></td>
+<td>No hashcat (skip hashcat-based analysis)</td>
+</tr>
+<tr>
+<td><code>-t 3</code></td>
+<td>Use 3 threads</td>
+</tr>
+<tr>
+<td><code>-mrd 5</code></td>
+<td>Maximum request delay of 5 seconds</td>
+</tr>
+<tr>
+<td><code>-avsk</code></td>
+<td>Check all very-short known secrets</td>
+</tr>
+<tr>
+<td><code>-fvsp</code></td>
+<td>Filter valid secrets only</td>
+</tr>
+</tbody>
+</table>
+<p>Findings are stored as <code>Vulnerability</code> records.</p>
+<hr />
+<h3 id="sqlmap">Sqlmap<a class="headerlink" href="#sqlmap" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td>ACTIVE</td>
+</tr>
+<tr>
+<td><strong>Scan Order</strong></td>
+<td>12</td>
+</tr>
+<tr>
+<td><strong>Project</strong></td>
+<td><a href="https://sqlmap.org/">sqlmap.org</a></td>
+</tr>
+<tr>
+<td><strong>Tags</strong></td>
+<td><code>vuln-scan</code></td>
+</tr>
+<tr>
+<td><strong>Default Args</strong></td>
+<td><code>--batch --level=1 --risk=1 --crawl=2</code></td>
+</tr>
+<tr>
+<td><strong>Input Records</strong></td>
+<td><code>Port</code>, <code>HttpEndpointData</code></td>
+</tr>
+<tr>
+<td><strong>Output Records</strong></td>
+<td><code>Vulnerability</code></td>
+</tr>
+</tbody>
+</table>
+<p>Automated SQL injection detection and exploitation tool. Runs non-interactively (<code>--batch</code>) at conservative level 1 / risk 1 with a depth-2 crawl to discover injectable parameters across web endpoints.</p>
+<p>Positioned at scan order 12 to run after Feroxbuster (10) so that all discovered HTTP endpoints are available as injection targets. URL deduplication is tracked globally to avoid retesting previously scanned endpoints.</p>
+<p>Confirmed SQL injection findings are stored as <code>Vulnerability</code> records.</p>
+<hr />
+<h2 id="tool-configuration">Tool Configuration<a class="headerlink" href="#tool-configuration" title="Permanent link">#</a></h2>
+<p>Each tool's behavior can be customized at scan schedule time by modifying the <code>args</code> field in the scan configuration. Default argument values are defined per tool and can be overridden without modifying the collector installation.</p>
+<p>For tools that support <strong>modules</strong> (Nmap NSE scripts, Netexec protocol modules, Nuclei templates, Metasploit auxiliary modules), modules can be selected individually per scan to control what is executed against discovered services.</p>
+<p>See <a href="/scans/scans/">Scans</a> for instructions on configuring tools as part of a scan schedule.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../data_model/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Data Model">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Data Model
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../resources/components/" class="md-footer__link md-footer__link--next" aria-label="Next: Components">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Components
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Securifera, Inc
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/securifera" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/securifera" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.annotate", "toc.integrate", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.expand", "navigation.path", "navigation.top", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+    
+  </body>
+</html>

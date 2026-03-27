@@ -286,16 +286,19 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../collectors/collectors/" class="md-tabs__link">
-        
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../collectors/collectors/" class="md-tabs__link">
+          
   
     
   
   Collectors
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -607,16 +610,116 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../collectors/collectors/" class="md-nav__link">
+    
+    
+      
         
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Collectors
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Collectors
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../collectors/collectors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../collectors/data_model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../collectors/tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1152,6 +1255,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#auto-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auto Mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#chat-history-panel" class="md-nav__link">
     <span class="md-ellipsis">
       Chat History Panel
@@ -1486,6 +1598,31 @@
 <li><strong>Connection Recovery</strong>: Automatic handling of connection issues</li>
 </ul>
 <h2 id="advanced-features">Advanced Features<a class="headerlink" href="#advanced-features" title="Permanent link">#</a></h2>
+<h3 id="auto-mode"><strong>Auto Mode</strong><a class="headerlink" href="#auto-mode" title="Permanent link">#</a></h3>
+<p>Auto Mode turns the AI assistant into a fully autonomous penetration testing agent. When enabled, a built-in <strong>Auto Mode Operator</strong> agent drives the session: it analyses the current Reverge data (discovered hosts, open ports, scan results), issues a directive to the Reverge AI agent, evaluates the response, and repeats — forming a continuous operator → agent loop that runs without user intervention.
+<br>
+<br>
+All scan jobs scheduled during an Auto Mode session are routed through the Reverge scheduler and remain visible in the normal scan history.
+<br></p>
+<p><strong>Enabling Auto Mode</strong></p>
+<ol>
+<li>Open the AI assistant chat panel.</li>
+<li>Toggle the <strong>Auto Mode</strong> switch located below the chat input area.</li>
+<li>Type your high-level objective (e.g. <em>"Enumerate all services on target example.com and report any critical findings"</em>) and press <strong>Enter</strong> to send.</li>
+<li>The operator takes over from the first AI response and continues issuing directives autonomously.</li>
+</ol>
+<p><strong>While Auto Mode is Running</strong></p>
+<ul>
+<li>The <strong>operator bubble</strong> (labelled <em>Operator</em>) shows the directive issued for each turn, together with any thinking steps and tool calls the operator made to arrive at it.</li>
+<li>The <strong>agent bubble</strong> (labelled <em>REVERGE AI</em>) shows the agent's response to each directive, including intermediate tool-call and thinking step indicators.</li>
+<li>The <strong>token counter</strong> (top-right of the input area) tracks cumulative token usage across both the operator and agent for the entire session.</li>
+<li>A turn indicator below the toggle (e.g. <em>Turn 3/10</em>) shows current progress against any configured limits.</li>
+</ul>
+<p><strong>Stopping Auto Mode</strong></p>
+<p>Toggle the <strong>Auto Mode</strong> switch off at any time to stop the loop gracefully after the current agent response completes. The session history is preserved and the chat remains available for normal use.
+<br>
+<br>
+Auto Mode also stops automatically when any configured limit is reached (max turns, max time, max tokens, or when a significant finding is discovered if <strong>Stop on Significant Findings</strong> is enabled in <strong>Settings → AI → Auto Mode</strong>).</p>
 <h3 id="chat-history-panel"><strong>Chat History Panel</strong><a class="headerlink" href="#chat-history-panel" title="Permanent link">#</a></h3>
 <ul>
 <li><strong>Browse Sessions</strong>: Click the history button (🕐) in the header to open the history sidebar listing all previous conversations</li>
@@ -1592,6 +1729,9 @@
 </li>
 <li>
 <p><strong>Auto-resize Input</strong>: Text area expands as you type longer messages</p>
+</li>
+<li>
+<p><strong>Auto Mode Toggle</strong>: Enable or disable the autonomous operator → agent loop for the current session. The toggle is located below the input field alongside the session token counter.</p>
 </li>
 </ul>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">#</a></h2>

@@ -286,16 +286,19 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../collectors/collectors/" class="md-tabs__link">
-        
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../collectors/collectors/" class="md-tabs__link">
+          
   
     
   
   Collectors
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -607,16 +610,116 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../collectors/collectors/" class="md-nav__link">
+    
+    
+      
         
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Collectors
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Collectors
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../collectors/collectors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../collectors/data_model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../collectors/tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1132,6 +1235,39 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#auto-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auto Mode
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Auto Mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#auto-mode-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auto Mode Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-mode-operator-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auto Mode Operator Agent
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#troubleshooting" class="md-nav__link">
     <span class="md-ellipsis">
       Troubleshooting
@@ -1373,6 +1509,28 @@ Once the port forward connection is established, configure the <strong>Ollama Ho
 <h3 id="editing-skills">Editing Skills<a class="headerlink" href="#editing-skills" title="Permanent link">#</a></h3>
 <p>Click any skill row to open the inline <strong>Edit Skill</strong> panel on the right. Modify the name, description, or Markdown content and click <img src="../../assets/save_btn.png" alt="Save button" width="25"> to save.</p>
 <hr />
+<hr />
+<h2 id="auto-mode">Auto Mode<a class="headerlink" href="#auto-mode" title="Permanent link">#</a></h2>
+<p>Auto Mode enables a fully autonomous penetration testing loop. When activated from the chat panel, a dedicated <strong>Auto Mode Operator</strong> agent takes over: it reviews the current Reverge data (hosts, open ports, scan results), formulates a directive, hands it to the Reverge AI agent for execution, inspects the result, and repeats — continuing until the objective is complete or a configured limit is reached.
+<br>
+<br>
+All scan jobs launched during an Auto Mode session are routed through the Reverge scheduler so they remain auditable and cancellable.</p>
+<h3 id="auto-mode-configuration">Auto Mode Configuration<a class="headerlink" href="#auto-mode-configuration" title="Permanent link">#</a></h3>
+<p>Navigate to <strong>Settings → AI</strong> and scroll to the <strong>Auto Mode</strong> panel to configure global limits that apply to every Auto Mode session.
+<br>
+<br>
+<strong>Configuration Fields:</strong>
+<br>
+- <strong>Max Turns</strong> — Maximum number of operator → agent turn cycles. Set to <code>0</code> for no limit. Each "turn" counts as one full operator directive plus one agent response.
+<br>
+- <strong>Max Time (min)</strong> — Wall-clock time limit in minutes after which Auto Mode stops automatically. Set to <code>0</code> for no limit.
+<br>
+- <strong>Max Tokens</strong> — Total token budget (input + output combined across both the operator and agent). Set to <code>0</code> for no limit. The running token count is displayed live in the chat panel.
+<br>
+- <strong>Stop on Significant Findings</strong> — When enabled, the operator is instructed to declare the objective complete as soon as a critical or high-severity vulnerability is confirmed in the Reverge database, even if not every attack vector has been explored.</p>
+<h3 id="auto-mode-operator-agent">Auto Mode Operator Agent<a class="headerlink" href="#auto-mode-operator-agent" title="Permanent link">#</a></h3>
+<p>The <strong>Auto Mode Operator</strong> is a built-in agent (marked with a lock icon in the Agents list) that drives the autonomous loop. Its system prompt can be viewed and customised via <strong>Settings → AI → Agents</strong>, and MCP servers or skills can be assigned to it just like any other agent. The operator has full read access to Reverge data tools so it can make informed decisions between turns.</p>
+<hr />
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">#</a></h2>
 <ul>
 <li><strong>API Authentication Errors</strong>: Verify your API tokens are correct and have sufficient permissions</li>
@@ -1381,6 +1539,7 @@ Once the port forward connection is established, configure the <strong>Ollama Ho
 <li><strong>Rate Limiting</strong>: Some providers have rate limits; consider upgrading your plan if needed</li>
 <li><strong>Agent not appearing in chat</strong>: Ensure the agent has been saved and the page has been refreshed</li>
 <li><strong>Skill not taking effect</strong>: Confirm the skill is assigned to the active agent and the agent is selected in the chat panel</li>
+<li><strong>Auto Mode not stopping</strong>: Use the <strong>Auto Mode</strong> toggle in the chat panel to stop the loop manually at any time</li>
 </ul>
 <p><span style="color: red;">**Note: API keys are sensitive information. Ensure they are kept secure and have appropriate access</p>
 
