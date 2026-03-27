@@ -12,7 +12,10 @@ nav:
     - Authentication: setup/authentication.md
   - Scans:  scans/scans.md
   - Targets:  targets/targets.md
-  - Collectors: collectors/collectors.md
+  - Collectors:
+    - Overview: collectors/collectors.md
+    - Data Model: collectors/data_model.md
+    - Tools: collectors/tools.md
   - Resources: 
     - Components: resources/components.md
     - Tools: resources/tools.md
